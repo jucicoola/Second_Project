@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}{{ trip.name }} - TravelBank{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>{{ trip.name }}</h1>
+    <div>
+        <a href="{% url 'trip_update' trip.pk %}" class="btn btn-secondary">수정</a>
+        <a href="{% url 'trip_delete' trip.pk %}" class="btn btn-danger">삭제</a>
+    </div>
+</div>
+
+<div class="card">
+    <h3>여행 정보</h3>
+    <table class="table">
+        <tr>
+            <th>국가</th>
+            <td>{{ trip.country }}</td>
+        </tr>
+        <tr>
+            <th>도시</th>
+            <td>{{ trip.city|default:"-" }}</td>
+        </tr>
+        <tr>
+            <th>여행 기간</th>
+            <td>{{ trip.start_date|date:"Y-m-d" }} ~ {% if trip.end_date %}{{ trip.end_date|date:"Y-m-d" }}{% else %}진행중{% endif %}</td>
+        </tr>
+        <tr>
+            <th>메모</th>
+            <td>{{ trip.memo|default:"-" }}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="card">
+    <h3>지출 요약</h3>
+    <table class="table">
+        <tr>
+            <th>총 입금</th>
+            <td>{{ total_income|currency }}</td>
+        </tr>
+        <tr>
+            <th>총 출금</th>
+            <td>{{ total_expense|currency }}</td>
+        </tr>
+        <tr>
+            <th>순액</th>
+            <td><strong>{{ net_amount|currency }}</strong></td>
+        </tr>
+    </table>
+</div>
+
+<div class="card">
+    <h3>거래 내역</h3>
+    {% if transactions %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>거래일시</th>
+                <th>구분</th>
+                <th>카테고리</th>
+                <th>금액</th>
+                <th>가맹점</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.occurred_at|date:"Y-m-d H:i" }}</td>
+                <td>{{ transaction.get_transaction_type_display }}</td>
+                <td>{{ transaction.category.name }}</td>
+                <td>{{ transaction.amount|currency }}</td>
+                <td>{{ transaction.merchant|default:"-" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>거래 내역이 없습니다.</p>
+    {% endif %}
+</div>
+{% endblock %}

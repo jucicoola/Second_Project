@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% block title %}대시보드 - TravelBank{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>대시보드</h1>
+</div>
+
+<div class="dashboard-grid">
+    <div class="stat-card income">
+        <h3>이번 달 입금</h3>
+        <div class="amount">{{ current_month_summary.total_income|currency }}</div>
+        <div class="count">거래 {{ current_month_summary.transaction_count }}건</div>
+    </div>
+    
+    <div class="stat-card expense">
+        <h3>이번 달 출금</h3>
+        <div class="amount">{{ current_month_summary.total_expense|currency }}</div>
+    </div>
+    
+    <div class="stat-card net">
+        <h3>순액</h3>
+        <div class="amount">{{ current_month_summary.net_amount|currency }}</div>
+    </div>
+</div>
+
+<div class="chart-container">
+    <div class="chart-header">카테고리별 지출</div>
+    {% for stat in category_stats %}
+    <div class="progress-bar-container">
+        <div class="progress-label">
+            <span>{{ stat.category__name }}</span>
+            <span>{{ stat.total|currency }} ({{ stat.percentage|floatformat:1 }}%)</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: {{ stat.percentage }}%;">
+                {{ stat.count }}건
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>데이터가 없습니다.</p>
+    {% endfor %}
+</div>
+
+<div class="card">
+    <div class="card-header">최근 거래</div>
+    {% for transaction in recent_transactions %}
+    <div class="transaction-item">
+        <div class="transaction-info">
+            <h4>{{ transaction.category.name }} - {{ transaction.merchant|default:"기타" }}</h4>
+            <div class="transaction-meta">
+                {{ transaction.occurred_at|date:"Y-m-d H:i" }} | {{ transaction.account.name }}
+                {% if transaction.trip %}| {{ transaction.trip.name }}{% endif %}
+            </div>
+        </div>
+        <div class="transaction-amount {{ transaction.transaction_type }}">
+            {% if transaction.transaction_type == 'expense' %}-{% else %}+{% endif %}
+            {{ transaction.amount|currency }}
+        </div>
+    </div>
+    {% empty %}
+    <p>거래 내역이 없습니다.</p>
+    {% endfor %}
+    <div class="text-center mt-2">
+        <a href="{% url 'transaction_list' %}" class="btn btn-secondary">모든 거래 보기</a>
+    </div>
+</div>
+{% endblock %}

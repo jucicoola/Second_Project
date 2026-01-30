@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}거래 상세 - TravelBank{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>거래 상세</h1>
+    <div>
+        <a href="{% url 'transaction_update' transaction.pk %}" class="btn btn-secondary">수정</a>
+        <a href="{% url 'transaction_delete' transaction.pk %}" class="btn btn-danger">삭제</a>
+    </div>
+</div>
+
+<div class="card">
+    <h3>거래 정보</h3>
+    <table class="table">
+        <tr>
+            <th>거래일시</th>
+            <td>{{ transaction.occurred_at|date:"Y-m-d H:i" }}</td>
+        </tr>
+        <tr>
+            <th>거래 유형</th>
+            <td>{{ transaction.get_transaction_type_display }}</td>
+        </tr>
+        <tr>
+            <th>금액</th>
+            <td><strong>{{ transaction.amount|currency }}</strong></td>
+        </tr>
+        <tr>
+            <th>카테고리</th>
+            <td>{{ transaction.category.name }}</td>
+        </tr>
+        <tr>
+            <th>계좌</th>
+            <td>{{ transaction.account.name }}</td>
+        </tr>
+        <tr>
+            <th>여행</th>
+            <td>{% if transaction.trip %}<a href="{% url 'trip_detail' transaction.trip.pk %}">{{ transaction.trip.name }}</a>{% else %}-{% endif %}</td>
+        </tr>
+        <tr>
+            <th>가맹점</th>
+            <td>{{ transaction.merchant|default:"-" }}</td>
+        </tr>
+        <tr>
+            <th>메모</th>
+            <td>{{ transaction.memo|default:"-" }}</td>
+        </tr>
+    </table>
+</div>
+
+{% if transaction.receipts.all %}
+<div class="card">
+    <h3>영수증</h3>
+    {% for receipt in transaction.receipts.all %}
+    <div style="margin-bottom: 1rem;">
+        <a href="{{ receipt.file.url }}" target="_blank">영수증 보기 ({{ receipt.uploaded_at|date:"Y-m-d H:i" }})</a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

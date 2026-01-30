@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}계좌 목록 - TravelBank{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>계좌 목록</h1>
+    <a href="{% url 'account_create' %}" class="btn btn-primary">+ 새 계좌 등록</a>
+</div>
+
+<div class="card">
+    {% if accounts %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>계좌명</th>
+                <th>은행명</th>
+                <th>계좌번호</th>
+                <th>초기잔액</th>
+                <th>관리</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for account in accounts %}
+            <tr>
+                <td><a href="{% url 'account_detail' account.pk %}">{{ account.name }}</a></td>
+                <td>{{ account.bank_name }}</td>
+                <td>{{ account.account_number|mask_account }}</td>
+                <td>{{ account.initial_balance|currency }}</td>
+                <td>
+                    <a href="{% url 'account_update' account.pk %}" class="btn btn-secondary">수정</a>
+                    <a href="{% url 'account_delete' account.pk %}" class="btn btn-danger">삭제</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>등록된 계좌가 없습니다. 새 계좌를 등록해주세요.</p>
+    {% endif %}
+</div>
+{% endblock %}

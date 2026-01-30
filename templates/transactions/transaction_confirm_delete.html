@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}거래 삭제 확인 - TravelBank{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>거래 삭제 확인</h1>
+</div>
+
+<div class="card">
+    <p>정말로 이 거래 내역을 삭제하시겠습니까?</p>
+    <p><strong>{{ object.category.name }}</strong> - {{ object.amount }}원 ({{ object.occurred_at|date:"Y-m-d" }})</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-actions">
+            <button type="submit" class="btn btn-danger">삭제</button>
+            <a href="{% url 'transaction_list' %}" class="btn btn-secondary">취소</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

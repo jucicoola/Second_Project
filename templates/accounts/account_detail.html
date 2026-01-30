@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}{{ account.name }} - TravelBank{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>{{ account.name }}</h1>
+    <div>
+        <a href="{% url 'account_update' account.pk %}" class="btn btn-secondary">수정</a>
+        <a href="{% url 'account_delete' account.pk %}" class="btn btn-danger">삭제</a>
+    </div>
+</div>
+
+<div class="card">
+    <h3>계좌 정보</h3>
+    <table class="table">
+        <tr>
+            <th>은행명</th>
+            <td>{{ account.bank_name }}</td>
+        </tr>
+        <tr>
+            <th>계좌번호</th>
+            <td>{{ account.account_number|mask_account }}</td>
+        </tr>
+        <tr>
+            <th>초기잔액</th>
+            <td>{{ account.initial_balance|currency }}</td>
+        </tr>
+        <tr>
+            <th>등록일</th>
+            <td>{{ account.created_at|date:"Y-m-d H:i" }}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="card">
+    <h3>최근 거래 내역</h3>
+    {% if transactions %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>거래일시</th>
+                <th>구분</th>
+                <th>카테고리</th>
+                <th>금액</th>
+                <th>가맹점</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.occurred_at|date:"Y-m-d H:i" }}</td>
+                <td>{{ transaction.get_transaction_type_display }}</td>
+                <td>{{ transaction.category.name }}</td>
+                <td>{{ transaction.amount|currency }}</td>
+                <td>{{ transaction.merchant|default:"-" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>거래 내역이 없습니다.</p>
+    {% endif %}
+</div>
+{% endblock %}

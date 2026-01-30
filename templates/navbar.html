@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="{% url 'dashboard' %}" class="logo">💰 TravelBank</a>
+        
+        {% if user.is_authenticated %}
+            <ul class="nav-menu">
+                <li><a href="{% url 'dashboard' %}">대시보드</a></li>
+                <li><a href="{% url 'trip_list' %}">여행</a></li>
+                <li><a href="{% url 'account_list' %}">계좌</a></li>
+                <li><a href="{% url 'transaction_list' %}">거래</a></li>
+                <li><a href="{% url 'logout' %}">로그아웃 ({{ user.username }})</a></li>
+            </ul>
+        {% else %}
+            <ul class="nav-menu">
+                <li><a href="{% url 'login' %}">로그인</a></li>
+                <li><a href="{% url 'signup' %}">회원가입</a></li>
+            </ul>
+        {% endif %}
+    </div>
+</nav>

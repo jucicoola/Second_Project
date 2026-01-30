@@ -1,0 +1,101 @@
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-control:disabled {
+    background-color: #ecf0f1;
+    cursor: not-allowed;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-text {
+    font-size: 0.875rem;
+    color: #7f8c8d;
+    margin-top: 0.25rem;
+}
+
+.form-error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.errorlist {
+    list-style: none;
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 4rem auto;
+}
+
+.auth-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+    font-size: 1.75rem;
+    color: #2c3e50;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #7f8c8d;
+}
+
+.auth-footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}

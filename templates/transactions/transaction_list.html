@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}거래 목록 - TravelBank{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>거래 목록</h1>
+    <a href="{% url 'transaction_create' %}" class="btn btn-primary">+ 새 거래 등록</a>
+</div>
+
+<div class="card">
+    <form method="get" style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+        {% for field in filter_form %}
+            <div>
+                {{ field.label_tag }}
+                {{ field }}
+            </div>
+        {% endfor %}
+        <div style="align-self: flex-end;">
+            <button type="submit" class="btn btn-secondary">필터 적용</button>
+            <a href="{% url 'transaction_list' %}" class="btn btn-secondary">초기화</a>
+        </div>
+    </form>
+</div>
+
+<div class="card">
+    {% if transactions %}
+    <div style="margin-bottom: 1rem; font-weight: bold;">
+        총 금액: {{ total_amount|currency }}
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>거래일시</th>
+                <th>구분</th>
+                <th>카테고리</th>
+                <th>금액</th>
+                <th>가맹점</th>
+                <th>계좌</th>
+                <th>관리</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.occurred_at|date:"Y-m-d H:i" }}</td>
+                <td>{{ transaction.get_transaction_type_display }}</td>
+                <td>{{ transaction.category.name }}</td>
+                <td>{{ transaction.amount|currency }}</td>
+                <td>{{ transaction.merchant|default:"-" }}</td>
+                <td>{{ transaction.account.name }}</td>
+                <td>
+                    <a href="{% url 'transaction_detail' transaction.pk %}" class="btn btn-secondary">상세</a>
+                    <a href="{% url 'transaction_update' transaction.pk %}" class="btn btn-secondary">수정</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>거래 내역이 없습니다.</p>
+    {% endif %}
+</div>
+{% endblock %}

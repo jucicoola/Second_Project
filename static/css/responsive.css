@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .table {
+        font-size: 0.875rem;
+    }
+    
+    .table th,
+    .table td {
+        padding: 0.5rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .auth-container {
+        margin: 2rem auto;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+    }
+}

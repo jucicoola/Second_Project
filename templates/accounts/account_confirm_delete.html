@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}계좌 삭제 확인 - TravelBank{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>계좌 삭제 확인</h1>
+</div>
+
+<div class="card">
+    <p>정말로 "{{ object.name }}" 계좌를 삭제하시겠습니까?</p>
+    <p style="color: #e74c3c;">이 계좌와 연결된 모든 거래 내역도 함께 삭제됩니다.</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-actions">
+            <button type="submit" class="btn btn-danger">삭제</button>
+            <a href="{% url 'account_list' %}" class="btn btn-secondary">취소</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
