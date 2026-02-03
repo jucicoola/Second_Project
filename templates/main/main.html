@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load humanize %} {% block content %}
+<div style="max-width: 1000px; margin: 40px auto; padding: 0 20px; font-family: sans-serif;">
+    <div style="display: flex; gap: 30px;">
+        
+        <div style="flex: 2;">
+            <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px;">최근 여행지</h2>
+            
+            {% for trip in recent_trips %}
+            <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 2px 2px 10px rgba(0,0,0,0.05);">
+                
+                <h3 style="margin: 0 0 10px 0; color: #007bff; font-size: 1.4rem;">
+                    {{ trip.name }}
+                </h3>
+                
+                <p style="margin: 5px 0;">📅 <strong>여행기간:</strong> {{ trip.start_date }} ~ {{ trip.end_date }}</p>
+                <p style="margin: 5px 0;">💰 <strong>지출총액:</strong> {{ trip.total_spent|intcomma }}원</p>
+                
+                <div style="margin-top: 15px; padding-top: 10px; border-top: 1px dashed #eee;">
+                    <a href="{% url 'trip_detail' trip.id %}" style="text-decoration: none; color: #555; font-size: 0.9rem;">
+                        <strong>상세보기 →</strong> 
+                        <span style="color: #888; margin-left: 10px;">
+                            {{ trip.memo|default:"등록된 메모가 없습니다."|truncatechars:40 }}
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <p>등록된 여행이 없습니다.</p>
+            {% endfor %}
+        </div>
+
+        <div style="flex: 1;">
+            <div style="background: #f4f4f4; border-radius: 12px; padding: 25px; border: 1px solid #eee;">
+                <h2 style="margin-top: 0; font-size: 1.2rem; color: #444;">📊 서비스 통계</h2>
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;">
+                
+                <div style="margin-bottom: 20px;">
+                    <small style="color: #777;">총 사용자</small>
+                    <div style="font-size: 1.5rem; font-weight: bold;">{{ total_users|intcomma }}명</div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <small style="color: #777;">등록된 여행</small>
+                    <div style="font-size: 1.5rem; font-weight: bold;">{{ total_trips|intcomma }}건</div>
+                </div>
+
+                <div>
+                    <small style="color: #777;">누적 지출 금액</small>
+                    <div style="font-size: 1.5rem; font-weight: bold; color: #d63031;">{{ total_spent_all|intcomma }}원</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

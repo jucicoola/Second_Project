@@ -1,6 +1,9 @@
 from django.urls import path
 from . import views
 
+# 이 줄이 반드시 있어야 'trips:trip_detail' 형식을 사용할 수 있습니다.
+# app_name = 'trips' 
+
 urlpatterns = [
     path('', views.TripListView.as_view(), name='trip_list'),
     path('create/', views.TripCreateView.as_view(), name='trip_create'),

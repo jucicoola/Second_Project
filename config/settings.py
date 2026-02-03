@@ -20,6 +20,8 @@ INSTALLED_APPS = [
     'apps.trips',
     'apps.transactions',
     'apps.dashboard',
+    'apps.main',
+    'django.contrib.humanize',  # 이 줄을 추가하세요!
     'core',
 ]
 

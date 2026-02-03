@@ -1,20 +1,22 @@
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="{% url 'dashboard' %}" class="logo">💰 TravelBank</a>
+<nav class="navbar" style="background: #333; padding: 15px 0; color: white;">
+    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <a href="{% url 'main' %}" class="logo" style="font-size: 1.5rem; font-weight: bold; color: #007bff; text-decoration: none;">💰 TravelBank</a>
         
-        {% if user.is_authenticated %}
-            <ul class="nav-menu">
-                <li><a href="{% url 'dashboard' %}">대시보드</a></li>
-                <li><a href="{% url 'trip_list' %}">여행</a></li>
-                <li><a href="{% url 'account_list' %}">계좌</a></li>
-                <li><a href="{% url 'transaction_list' %}">거래</a></li>
-                <li><a href="{% url 'logout' %}">로그아웃 ({{ user.username }})</a></li>
-            </ul>
-        {% else %}
-            <ul class="nav-menu">
-                <li><a href="{% url 'login' %}">로그인</a></li>
-                <li><a href="{% url 'signup' %}">회원가입</a></li>
-            </ul>
-        {% endif %}
+        <ul class="nav-menu" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'index' %}" style="color: white; text-decoration: none;">대시보드</a></li>
+                <li><a href="{% url 'trip_list' %}" style="color: white; text-decoration: none;">여행</a></li>
+                <li><a href="{% url 'account_list' %}" style="color: white; text-decoration: none;">계좌</a></li>
+                <li><a href="{% url 'transaction_list' %}" style="color: white; text-decoration: none;">거래</a></li>
+                
+                <li style="margin-left: 20px;">
+                    <span style="color: #ccc;">{{ user.username }}님</span>
+                    <a href="{% url 'logout' %}" style="color: #ff4757; text-decoration: none; margin-left: 10px;">로그아웃</a>
+                </li>
+            {% else %}
+                <li><a href="{% url 'login' %}" style="color: white; text-decoration: none;">로그인</a></li>
+                <li><a href="{% url 'signup' %}" style="color: white; text-decoration: none;">회원가입</a></li>
+            {% endif %}
+        </ul>
     </div>
 </nav>

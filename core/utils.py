@@ -11,3 +11,5 @@ def mask_account_number(account_number):
         return account_number[:3] + '****' + account_number[-4:]
     
     return account_number
+
+## 질문 : 실제 계좌번호 인증 API 연결을 어떻게 하지? PG사, Toss 에 연결
