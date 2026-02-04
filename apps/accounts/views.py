@@ -24,6 +24,7 @@ class LoginView(DjangoLoginView):
     """로그인 뷰"""
     template_name = 'accounts/login.html'
     redirect_authenticated_user = True
+    # redirect 다른 url?
     
     def form_valid(self, form):
         messages.success(self.request, f'{form.get_user().username}님, 환영합니다!')
@@ -51,7 +52,7 @@ class AccountDetailView(UserOwnershipMixin, DetailView):
     context_object_name = 'account'
     
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs) #함수로 들어오는 이름 붙은 값들을 전부 받음 (이름 붙은 인자)
         context['transactions'] = self.object.transaction_set.select_related(
             'category', 'trip'
         ).order_by('-occurred_at')[:20]

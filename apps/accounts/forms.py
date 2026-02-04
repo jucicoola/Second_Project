@@ -5,10 +5,10 @@ from .models import Account
 
 class SignUpForm(UserCreationForm):
     """회원가입 폼"""
-    email = forms.EmailField(
+    email = forms.EmailField(  # 이메일 자동검사
         required=True,
         widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder': '이메일'})
-    )
+    ) # 입력창 태그 안에 들어가는 옵션들
     username = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': '이름'})
     )
@@ -20,18 +20,19 @@ class SignUpForm(UserCreationForm):
         label='비밀번호 확인',
         widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': '비밀번호 확인'})
     )
-    
+    # label -> 한국어로 바꾸고 싶을 때, 기본 이름 이상해서 변경하고 싶을 때 사용
+
     class Meta:
-        model = User
-        fields = ('username', 'email', 'password1', 'password2')
+        model = User # 장고 기본 User 테이블, 회원가입하면 User 테이블에 저장 
+        fields = ('username', 'email', 'password1', 'password2') # 화면에 보여주고 저장할 필드 목록
     
-    def clean_email(self):
+    def clean_email(self): # clean_필드명: 해당 필드 검증 규칙
         email = self.cleaned_data.get('email')
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError('이미 사용 중인 이메일입니다.')
         return email
 
-class AccountForm(forms.ModelForm):
+class AccountForm(forms.ModelForm): # ModelForm = 모델을 기반으로 자동 생성되는 DB 연결 폼
     """계좌 생성/수정 폼"""
     class Meta:
         model = Account
