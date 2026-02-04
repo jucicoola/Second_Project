@@ -4,19 +4,18 @@ Django 기반의 개인 여행 경비 관리 웹 애플리케이션입니다.
 
 ## 주요 기능
 
-- ✅ 사용자 인증 (회원가입, 로그인, 로그아웃)
-- ✅ 계좌 관리 (생성, 조회, 수정, 삭제)
-- ✅ 여행 관리 (생성, 조회, 수정, 삭제)
-- ✅ 거래 관리 (입출금 내역 기록, 필터링, 검색)
-- ✅ 영수증 첨부 (이미지/PDF 업로드)
-- ✅ 대시보드 (월별/카테고리별 통계)
-- ✅ 계좌번호 마스킹 (보안 처리)
-- ✅ 본인 데이터 접근 제한
+- ✅ **메인 대시보드**: 최근 여행지 현황 및 국가별 지출 TOP 3 시각화 (신규)
+- ✅ **사용자 인증**: 회원가입, 로그인, 로그아웃 및 본인 데이터 접근 제한
+- ✅ **계좌 관리**: 생성, 조회, 수정, 삭제 및 계좌번호 마스킹 보안 처리
+- ✅ **여행 관리**: 여행지 등록, 일정 관리 및 메모 기록
+- ✅ **거래 관리**: 입출금 내역 기록, 필터링, 검색 기능
+- ✅ **영수증 첨부**: 이미지/PDF 업로드 및 관리 (Pillow 활용)
+- ✅ **보안 기능**: 비밀번호 암호화(PBKDF2), CSRF 보호, UserOwnershipMixin 적용
 
 ## 기술 스택
 
 - **Backend**: Django 5.0
-- **Frontend**: HTML, CSS (JavaScript 미사용)
+- **Frontend**: HTML, CSS, **JavaScript (Chart.js 라이브러리 활용)**
 - **Database**: SQLite (개발), PostgreSQL 지원 가능
 - **파일 처리**: Pillow (이미지 처리)
 
@@ -79,30 +78,32 @@ python manage.py runserver
 ## 프로젝트 구조
 
 ```
+
 travelbank/
 ├── config/                 # 프로젝트 설정
 │   ├── settings.py
-│   ├── urls.py
+│   ├── urls.py             #수정됨
 │   └── wsgi.py
 ├── apps/                   # Django 앱
+|   |── main/               # [추가] 메인 페이지 및 통계 시각화
 │   ├── accounts/          # 사용자 인증 및 계좌 관리
 │   ├── trips/             # 여행 관리
 │   ├── transactions/      # 거래 관리
-│   └── dashboard/         # 대시보드
-├── core/                  # 공통 유틸리티
+│   └── dashboard/         # 사용자별 대시보드
+├── core/                  # 공통 유틸리티(Validators, Mixins)
 │   ├── mixins.py
 │   ├── validators.py
 │   └── templatetags/
 ├── static/                # 정적 파일 (CSS)
 ├── media/                 # 업로드 파일 (영수증)
-├── templates/             # HTML 템플릿
+├── templates/             # HTML 템플릿 (main/main.html 추가)
 ├── scripts/               # 유틸리티 스크립트
 └── manage.py
 ```
 
 ## 주요 URL
 
-- `/` - 대시보드 (로그인 후 리다이렉트)
+- `/` - 서비스 메인 대시보드 (통계 그래프 포함)
 - `/accounts/signup/` - 회원가입
 - `/accounts/login/` - 로그인
 - `/accounts/` - 계좌 목록
@@ -110,6 +111,12 @@ travelbank/
 - `/transactions/` - 거래 목록
 - `/dashboard/` - 대시보드
 - `/admin/` - 관리자 페이지
+
+## 시각화 기능 (Update)
+
+`apps/main`에서 **Chart.js**를 활용하여 다음과 같은 통계를 제공합니다:
+- **국가별 지출 TOP 3**: 전체 출금(`expense`) 데이터를 분석하여 상위 3개 국가의 지출 비중을 막대 그래프로 표시합니다.
+
 
 ## 보안 기능
 
@@ -180,6 +187,11 @@ rm db.sqlite3
 python manage.py migrate
 python scripts/init_categories.py
 ```
+### 데이터 동기화 방법
+
+1) 제공된 seed_data.json 파일을 프로젝트 루트에 둡니다.
+2) 터미널에서 python manage.py loaddata seed_data.json을 실행하세요.
+3) 관리자 계정을 포함한 모든 테스트 데이터가 즉시 생성됩니다.
 
 ## 라이선스
 
@@ -191,11 +203,11 @@ MIT License
 
 ## 개발 로드맵
 
-- [ ] 다중 통화 지원
-- [ ] CSV 내보내기 기능
-- [ ] 예산 설정 및 알림
-- [ ] 영수증 OCR 기능
-- [ ] 모바일 앱 개발
+- [x] 국가별 지출 통계 시각화 (Chart.js)
+- [ ] 다중 통화 지원 및 환율 계산
+- [ ] 데이터 내보내기 (CSV/PDF)
+- [ ] 예산 설정 및 초과 알림
+- [ ] 영수증 OCR (텍스트 자동 인식) 기능
 
 ## 문의
 

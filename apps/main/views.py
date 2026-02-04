@@ -35,4 +35,15 @@ class MainView(TemplateView):
         ).aggregate(Sum('amount'))['amount__sum'] or 0
         context['total_spent_all'] = total_spent_all
         
+        # 3. 국가별 여행 지출 TOP 3 (그래프용 데이터)
+        top_expenses = (
+            Transaction.objects.filter(transaction_type='expense', trip__isnull=False)
+            .values('trip__country')
+            .annotate(total=Sum('amount'))
+            .order_by('-total')[:3]
+        )
+        
+        context['labels'] = [item['trip__country'] for item in top_expenses]
+        context['data'] = [float(item['total']) for item in top_expenses]
+        
         return context
