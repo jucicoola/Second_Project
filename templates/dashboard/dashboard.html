@@ -51,26 +51,27 @@
 </div>
 
 <div class="card">
-    <div class="card-header">최근 거래</div>
-    {% for transaction in recent_transactions %}
+    <div class="card-header">여행별 지출</div>
+    {% for trip in trip_stats %}
     <div class="transaction-item">
         <div class="transaction-info">
-            <h4>{{ transaction.category.name }} - {{ transaction.merchant|default:"기타" }}</h4>
+            <h4>{{ trip.name }} ({{ trip.country.name }} - {{ trip.city.name }})</h4>
             <div class="transaction-meta">
-                {{ transaction.occurred_at|date:"Y-m-d H:i" }} | {{ transaction.account.name }}
-                {% if transaction.trip %}| {{ transaction.trip.name }}{% endif %}
+                📅 {{ trip.start_date|date:"Y-m-d" }} 
+                {% if trip.end_date %}~ {{ trip.end_date|date:"Y-m-d" }}{% endif %}
+                | ⏱️ {{ trip.get_duration_days }}일
             </div>
         </div>
-        <div class="transaction-amount {{ transaction.transaction_type }}">
-            {% if transaction.transaction_type == 'expense' %}-{% else %}+{% endif %}
-            {{ transaction.amount|currency }}
+        <div class="transaction-amount expense">
+            {{ trip.total_expense|currency|default:"0원" }}
         </div>
     </div>
     {% empty %}
-    <p>거래 내역이 없습니다.</p>
+    <p>여행 내역이 없습니다.</p>
     {% endfor %}
     <div class="text-center mt-2">
-        <a href="{% url 'transaction_list' %}" class="btn btn-secondary">모든 거래 보기</a>
+        <a href="{% url 'trip_list' %}" class="btn btn-secondary">모든 여행 보기</a>
     </div>
 </div>
+
 {% endblock %}

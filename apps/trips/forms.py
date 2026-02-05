@@ -1,15 +1,19 @@
 from django import forms
-from .models import Trip
+from .models import Trip, Country, City
 
 class TripForm(forms.ModelForm):
     """여행 생성/수정 폼"""
+    
+    # Country 선택 후 → 해당 국가의 City만 보이도록 (JavaScript 필요)
+    # 일단은 모든 Country, City를 보여주는 방식으로 구현
+    
     class Meta:
         model = Trip
         fields = ['name', 'country', 'city', 'start_date', 'end_date', 'memo']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': '예: 도쿄 여행'}),
-            'country': forms.TextInput(attrs={'class': 'form-control', 'placeholder': '예: 일본'}),
-            'city': forms.TextInput(attrs={'class': 'form-control', 'placeholder': '예: 도쿄'}),
+            'country': forms.Select(attrs={'class': 'form-control'}),  # TextInput → Select
+            'city': forms.Select(attrs={'class': 'form-control'}),      # TextInput → Select
             'start_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'end_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'memo': forms.Textarea(attrs={'class': 'form-control', 'rows': 4, 'placeholder': '여행 메모'}),

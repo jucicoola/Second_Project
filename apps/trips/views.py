@@ -5,8 +5,9 @@ from django.urls import reverse_lazy
 from django.db.models import Sum, Q
 from core.mixins import UserOwnershipMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Trip
+from .models import Trip, City
 from .forms import TripForm
+from django.http import JsonResponse
 
 class TripListView(UserOwnershipMixin, ListView):
     """여행 목록 뷰: 로그인한 사용자의 여행만 표시"""
@@ -104,3 +105,8 @@ class TripDeleteView(UserOwnershipMixin, DeleteView):
     def delete(self, request, *args, **kwargs):
         messages.success(request, '여행 정보가 삭제되었습니다.')
         return super().delete(request, *args, **kwargs)
+
+def get_cities_by_country(request, country_id):
+    """특정 국가의 도시 목록 반환 (AJAX용)"""
+    cities = City.objects.filter(country_id=country_id).values('id', 'name')
+    return JsonResponse(list(cities), safe=False)

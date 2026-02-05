@@ -1,8 +1,8 @@
-from django.views.generic import TemplateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView # 데이터 담아서 템플릿에 전달
+from django.contrib.auth.mixins import LoginRequiredMixin # 로그인 해야 접속 가능
 from django.db.models import Sum, Count
-from django.db.models.functions import TruncMonth
-from datetime import datetime, timedelta
+from django.db.models.functions import TruncMonth # 날짜를 월 단위로 자르는 함수
+from datetime import datetime, timedelta # 파이썬 날짜 계산
 from apps.transactions.models import Transaction
 from apps.trips.models import Trip
 
@@ -10,14 +10,13 @@ class DashboardView(LoginRequiredMixin, TemplateView):
     """대시보드 뷰"""
     template_name = 'dashboard/dashboard.html'
     
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, **kwargs): # 템플릿에 전달할 데이터 묶음
         context = super().get_context_data(**kwargs)
         user = self.request.user
         
         context['monthly_stats'] = self.get_monthly_stats(user)
         context['category_stats'] = self.get_category_stats(user)
         context['trip_stats'] = self.get_trip_stats(user)
-        context['recent_transactions'] = self.get_recent_transactions(user)
         context['current_month_summary'] = self.get_current_month_summary(user)
         
         return context
@@ -38,7 +37,9 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         ).order_by('month')
         
         return list(monthly_data)
-    
+    # 그룹 기준 -> 그룹 -> 그룹 계산
+# values: 카테고리 기준 그룹 annotate: 그룹별 계산
+
     def get_category_stats(self, user):
         """카테고리별 지출 통계"""
         category_data = Transaction.objects.filter(
@@ -58,27 +59,19 @@ class DashboardView(LoginRequiredMixin, TemplateView):
                 item['percentage'] = (item['total'] / total_expense) * 100
             else:
                 item['percentage'] = 0
-        
-        return list(category_data)
+        # percentage 새 필드 
+        return list(category_data) # QuerySet -> 리스트로 변환
     
-    def get_trip_stats(self, user):
+    def get_trip_stats(self, user): # 화면 확인
         """여행별 지출 통계"""
         trips = Trip.objects.filter(user=user).annotate(
             total_expense=Sum(
                 'transaction_set__amount',
                 filter=models.Q(transaction_set__transaction_type='expense')
-            )
+            ) # sum() 안에 조건을 넣으려면 Q 객체 형태로만 가능 일반 filter 못씀 (from django.db.models import Q 필요)
         ).order_by('-start_date')[:5]
         
         return trips
-    
-    def get_recent_transactions(self, user):
-        """최근 거래 내역"""
-        return Transaction.objects.filter(
-            user=user
-        ).select_related(
-            'account', 'category', 'trip'
-        ).order_by('-occurred_at')[:10]
     
     def get_current_month_summary(self, user):
         """이번 달 요약"""

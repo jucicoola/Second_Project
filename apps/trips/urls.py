@@ -10,4 +10,5 @@ urlpatterns = [
     path('<int:pk>/', views.TripDetailView.as_view(), name='trip_detail'),
     path('<int:pk>/edit/', views.TripUpdateView.as_view(), name='trip_update'),
     path('<int:pk>/delete/', views.TripDeleteView.as_view(), name='trip_delete'),
+    path('api/cities/<int:country_id>/', views.get_cities_by_country, name='get_cities_by_country'),
 ]
