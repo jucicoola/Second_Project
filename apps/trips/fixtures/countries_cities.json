@@ -1,0 +1,371 @@
+[
+  {
+    "model": "trips.country",
+    "pk": 1,
+    "fields": {"name": "일본"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 1,
+    "fields": {"name": "도쿄", "country": 1}
+  },
+  {
+    "model": "trips.city",
+    "pk": 2,
+    "fields": {"name": "오사카", "country": 1}
+  },
+  {
+    "model": "trips.city",
+    "pk": 3,
+    "fields": {"name": "교토", "country": 1}
+  },
+  {
+    "model": "trips.city",
+    "pk": 4,
+    "fields": {"name": "후쿠오카", "country": 1}
+  },
+  {
+    "model": "trips.city",
+    "pk": 5,
+    "fields": {"name": "삿포로", "country": 1}
+  },
+  {
+    "model": "trips.city",
+    "pk": 6,
+    "fields": {"name": "나고야", "country": 1}
+  },
+  {
+    "model": "trips.city",
+    "pk": 7,
+    "fields": {"name": "오키나와", "country": 1}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 2,
+    "fields": {"name": "미국"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 8,
+    "fields": {"name": "뉴욕", "country": 2}
+  },
+  {
+    "model": "trips.city",
+    "pk": 9,
+    "fields": {"name": "로스앤젤레스", "country": 2}
+  },
+  {
+    "model": "trips.city",
+    "pk": 10,
+    "fields": {"name": "샌프란시스코", "country": 2}
+  },
+  {
+    "model": "trips.city",
+    "pk": 11,
+    "fields": {"name": "라스베가스", "country": 2}
+  },
+  {
+    "model": "trips.city",
+    "pk": 12,
+    "fields": {"name": "시애틀", "country": 2}
+  },
+  {
+    "model": "trips.city",
+    "pk": 13,
+    "fields": {"name": "시카고", "country": 2}
+  },
+  {
+    "model": "trips.city",
+    "pk": 14,
+    "fields": {"name": "하와이", "country": 2}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 3,
+    "fields": {"name": "프랑스"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 15,
+    "fields": {"name": "파리", "country": 3}
+  },
+  {
+    "model": "trips.city",
+    "pk": 16,
+    "fields": {"name": "니스", "country": 3}
+  },
+  {
+    "model": "trips.city",
+    "pk": 17,
+    "fields": {"name": "칸", "country": 3}
+  },
+  {
+    "model": "trips.city",
+    "pk": 18,
+    "fields": {"name": "리옹", "country": 3}
+  },
+  {
+    "model": "trips.city",
+    "pk": 19,
+    "fields": {"name": "마르세유", "country": 3}
+  },
+  {
+    "model": "trips.city",
+    "pk": 20,
+    "fields": {"name": "보르도", "country": 3}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 4,
+    "fields": {"name": "이탈리아"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 21,
+    "fields": {"name": "로마", "country": 4}
+  },
+  {
+    "model": "trips.city",
+    "pk": 22,
+    "fields": {"name": "베네치아", "country": 4}
+  },
+  {
+    "model": "trips.city",
+    "pk": 23,
+    "fields": {"name": "피렌체", "country": 4}
+  },
+  {
+    "model": "trips.city",
+    "pk": 24,
+    "fields": {"name": "밀라노", "country": 4}
+  },
+  {
+    "model": "trips.city",
+    "pk": 25,
+    "fields": {"name": "나폴리", "country": 4}
+  },
+  {
+    "model": "trips.city",
+    "pk": 26,
+    "fields": {"name": "베로나", "country": 4}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 5,
+    "fields": {"name": "스위스"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 27,
+    "fields": {"name": "취리히", "country": 5}
+  },
+  {
+    "model": "trips.city",
+    "pk": 28,
+    "fields": {"name": "제네바", "country": 5}
+  },
+  {
+    "model": "trips.city",
+    "pk": 29,
+    "fields": {"name": "인터라켄", "country": 5}
+  },
+  {
+    "model": "trips.city",
+    "pk": 30,
+    "fields": {"name": "루체른", "country": 5}
+  },
+  {
+    "model": "trips.city",
+    "pk": 31,
+    "fields": {"name": "베른", "country": 5}
+  },
+  {
+    "model": "trips.city",
+    "pk": 32,
+    "fields": {"name": "체르마트", "country": 5}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 6,
+    "fields": {"name": "호주"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 33,
+    "fields": {"name": "시드니", "country": 6}
+  },
+  {
+    "model": "trips.city",
+    "pk": 34,
+    "fields": {"name": "멜버른", "country": 6}
+  },
+  {
+    "model": "trips.city",
+    "pk": 35,
+    "fields": {"name": "골드코스트", "country": 6}
+  },
+  {
+    "model": "trips.city",
+    "pk": 36,
+    "fields": {"name": "브리즈번", "country": 6}
+  },
+  {
+    "model": "trips.city",
+    "pk": 37,
+    "fields": {"name": "케언즈", "country": 6}
+  },
+  {
+    "model": "trips.city",
+    "pk": 38,
+    "fields": {"name": "퍼스", "country": 6}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 7,
+    "fields": {"name": "스페인"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 39,
+    "fields": {"name": "바르셀로나", "country": 7}
+  },
+  {
+    "model": "trips.city",
+    "pk": 40,
+    "fields": {"name": "마드리드", "country": 7}
+  },
+  {
+    "model": "trips.city",
+    "pk": 41,
+    "fields": {"name": "세비야", "country": 7}
+  },
+  {
+    "model": "trips.city",
+    "pk": 42,
+    "fields": {"name": "그라나다", "country": 7}
+  },
+  {
+    "model": "trips.city",
+    "pk": 43,
+    "fields": {"name": "발렌시아", "country": 7}
+  },
+  {
+    "model": "trips.city",
+    "pk": 44,
+    "fields": {"name": "톨레도", "country": 7}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 8,
+    "fields": {"name": "독일"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 45,
+    "fields": {"name": "베를린", "country": 8}
+  },
+  {
+    "model": "trips.city",
+    "pk": 46,
+    "fields": {"name": "뮌헨", "country": 8}
+  },
+  {
+    "model": "trips.city",
+    "pk": 47,
+    "fields": {"name": "프랑크푸르트", "country": 8}
+  },
+  {
+    "model": "trips.city",
+    "pk": 48,
+    "fields": {"name": "하이델베르크", "country": 8}
+  },
+  {
+    "model": "trips.city",
+    "pk": 49,
+    "fields": {"name": "퀼른", "country": 8}
+  },
+  {
+    "model": "trips.city",
+    "pk": 50,
+    "fields": {"name": "함부르크", "country": 8}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 9,
+    "fields": {"name": "베트남"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 51,
+    "fields": {"name": "하노이", "country": 9}
+  },
+  {
+    "model": "trips.city",
+    "pk": 52,
+    "fields": {"name": "호치민", "country": 9}
+  },
+  {
+    "model": "trips.city",
+    "pk": 53,
+    "fields": {"name": "다낭", "country": 9}
+  },
+  {
+    "model": "trips.city",
+    "pk": 54,
+    "fields": {"name": "나트랑", "country": 9}
+  },
+  {
+    "model": "trips.city",
+    "pk": 55,
+    "fields": {"name": "호이안", "country": 9}
+  },
+  {
+    "model": "trips.city",
+    "pk": 56,
+    "fields": {"name": "후에", "country": 9}
+  },
+  
+  {
+    "model": "trips.country",
+    "pk": 10,
+    "fields": {"name": "태국"}
+  },
+  {
+    "model": "trips.city",
+    "pk": 57,
+    "fields": {"name": "방콕", "country": 10}
+  },
+  {
+    "model": "trips.city",
+    "pk": 58,
+    "fields": {"name": "푸켓", "country": 10}
+  },
+  {
+    "model": "trips.city",
+    "pk": 59,
+    "fields": {"name": "치앙마이", "country": 10}
+  },
+  {
+    "model": "trips.city",
+    "pk": 60,
+    "fields": {"name": "파타야", "country": 10}
+  },
+  {
+    "model": "trips.city",
+    "pk": 61,
+    "fields": {"name": "끄라비", "country": 10}
+  },
+  {
+    "model": "trips.city",
+    "pk": 62,
+    "fields": {"name": "아유타야", "country": 10}
+  }
+]
