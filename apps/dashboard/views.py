@@ -17,7 +17,6 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         context['monthly_stats'] = self.get_monthly_stats(user)
         context['category_stats'] = self.get_category_stats(user)
         context['trip_stats'] = self.get_trip_stats(user)
-        context['recent_transactions'] = self.get_recent_transactions(user)
         context['current_month_summary'] = self.get_current_month_summary(user)
         
         return context
@@ -73,14 +72,6 @@ class DashboardView(LoginRequiredMixin, TemplateView):
         ).order_by('-start_date')[:5]
         
         return trips
-    
-    def get_recent_transactions(self, user):
-        """최근 거래 내역"""
-        return Transaction.objects.filter(
-            user=user
-        ).select_related( # FK로 연결된 테이블을 JOIN해서 한 번에 가져옴
-            'account', 'category', 'trip'
-        ).order_by('-occurred_at')[:10]
     
     def get_current_month_summary(self, user):
         """이번 달 요약"""

@@ -27,4 +27,67 @@
         </div>
     </form>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const countrySelect = document.querySelector('#id_country');
+    const citySelect = document.querySelector('#id_city');
+    
+    if (!countrySelect || !citySelect) {
+        return; // 요소가 없으면 중단
+    }
+    
+    // 초기 도시 옵션 저장 (모든 도시)
+    const allCities = Array.from(citySelect.options);
+    
+    // 국가 선택 시 도시 필터링
+    countrySelect.addEventListener('change', function() {
+        const selectedCountryId = this.value;
+        
+        // 도시 드롭다운 초기화
+        citySelect.innerHTML = '<option value="">---------</option>';
+        
+        if (!selectedCountryId) {
+            // 국가 선택 안 했으면 모든 도시 표시
+            allCities.forEach(option => {
+                if (option.value) {
+                    citySelect.appendChild(option.cloneNode(true));
+                }
+            });
+            return;
+        }
+        
+        // AJAX로 해당 국가의 도시 가져오기
+        fetch(`/trips/api/cities/${selectedCountryId}/`)
+            .then(response => response.json())
+            .then(cities => {
+                cities.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city.id;
+                    option.textContent = city.name;
+                    citySelect.appendChild(option);
+                });
+                
+                // 도시가 없으면 메시지 표시
+                if (cities.length === 0) {
+                    const option = document.createElement('option');
+                    option.value = '';
+                    option.textContent = '해당 국가의 도시가 없습니다';
+                    citySelect.appendChild(option);
+                }
+            })
+            .catch(error => {
+                console.error('도시 로딩 실패:', error);
+                alert('도시 목록을 불러오는데 실패했습니다.');
+            });
+    });
+    
+    // 페이지 로드 시 국가가 이미 선택되어 있으면 (수정 모드)
+    if (countrySelect.value) {
+        countrySelect.dispatchEvent(new Event('change'));
+    }
+});
+</script>
+
+
 {% endblock %}

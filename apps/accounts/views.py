@@ -5,17 +5,22 @@ from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from core.mixins import UserOwnershipMixin
-from .models import Account
+from .models import Account, Profile
 from .forms import SignUpForm, AccountForm
 
 class SignUpView(CreateView):
     """회원가입 뷰"""
     form_class = SignUpForm
     template_name = 'accounts/signup.html'
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('main')
     
     def form_valid(self, form):
         response = super().form_valid(form)
+        Profile.objects.create(
+            user=self.object,  # 방금 생성된 User
+            age_group=form.cleaned_data['age_group'],
+            gender=form.cleaned_data['gender']
+        )
         login(self.request, self.object)
         messages.success(self.request, '회원가입이 완료되었습니다.')
         return response
