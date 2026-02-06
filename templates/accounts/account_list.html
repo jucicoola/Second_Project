@@ -17,7 +17,7 @@
                 <th>계좌명</th>
                 <th>은행명</th>
                 <th>계좌번호</th>
-                <th>초기잔액</th>
+                <!-- <th>초기잔액</th> -->
                 <th>관리</th>
             </tr>
         </thead>
@@ -27,7 +27,7 @@
                 <td><a href="{% url 'account_detail' account.pk %}">{{ account.name }}</a></td>
                 <td>{{ account.bank_name }}</td>
                 <td>{{ account.account_number|mask_account }}</td>
-                <td>{{ account.initial_balance|currency }}</td>
+                <!-- <td>{{ account.initial_balance|currency }}</td> -->
                 <td>
                     <a href="{% url 'account_update' account.pk %}" class="btn btn-secondary">수정</a>
                     <a href="{% url 'account_delete' account.pk %}" class="btn btn-danger">삭제</a>

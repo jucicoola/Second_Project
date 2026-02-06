@@ -23,7 +23,9 @@ class TransactionListView(UserOwnershipMixin, ListView):
         transaction_type = self.request.GET.get('transaction_type')
         start_date = self.request.GET.get('start_date')
         end_date = self.request.GET.get('end_date')
-        
+        trip_id = self.request.GET.get('trip')#추가하였음
+        if trip_id:                           #추가하였음
+            queryset = queryset.filter(trip_id=trip_id) #추가하였음
         if category:
             queryset = queryset.filter(category_id=category)
         
@@ -40,7 +42,8 @@ class TransactionListView(UserOwnershipMixin, ListView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['filter_form'] = TransactionFilterForm(self.request.GET)
+        # context['filter_form'] = TransactionFilterForm(self.request.GET)
+        context['filter_form'] = TransactionFilterForm(self.request.GET, user=self.request.user)
         context['total_amount'] = sum(t.amount for t in context['transactions'])
         return context
 

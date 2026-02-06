@@ -10,7 +10,7 @@
 </div>
 
 <div class="card">
-    <form method="get" style="display: flex; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;">
+    <form method="get" style="display: flex; gap: 0.3rem; margin-bottom: 1rem; flex-wrap: wrap;">
         {% for field in filter_form %}
             <div>
                 {{ field.label_tag }}
@@ -34,6 +34,7 @@
             <tr>
                 <th>거래일시</th>
                 <th>구분</th>
+                <th>여행명</th>
                 <th>카테고리</th>
                 <th>금액</th>
                 <th>가맹점</th>
@@ -46,6 +47,7 @@
             <tr>
                 <td>{{ transaction.occurred_at|date:"Y-m-d H:i" }}</td>
                 <td>{{ transaction.get_transaction_type_display }}</td>
+                <td>{{ transaction.trip.name|default:"-" }}</td>
                 <td>{{ transaction.category.name }}</td>
                 <td>{{ transaction.amount|currency }}</td>
                 <td>{{ transaction.merchant|default:"-" }}</td>
