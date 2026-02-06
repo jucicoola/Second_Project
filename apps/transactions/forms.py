@@ -1,6 +1,7 @@
 from django import forms
 from django.db.models import Case, When, Value, IntegerField
 from .models import Transaction, Receipt, Category
+from apps.trips.models import Trip #추가함
 
 class TransactionForm(forms.ModelForm):
     """거래 생성/수정 폼"""
@@ -52,6 +53,12 @@ class TransactionForm(forms.ModelForm):
 
 class TransactionFilterForm(forms.Form):
     """거래 필터 폼"""
+    trip = forms.ModelChoiceField(    # 추가함
+        queryset=Trip.objects.none(), # 추가함
+        required=False,                # 추가함
+        empty_label='전체 여행',          # 추가함
+        widget=forms.Select(attrs={'class': 'form-control'}) # 추가함
+    ) # 추가함
     category = forms.ModelChoiceField(
         queryset=None,
         required=False,
@@ -71,14 +78,26 @@ class TransactionFilterForm(forms.Form):
         required=False,
         widget=forms.DateInput(attrs={'class': 'form-control', 'type': 'date'})
     )
-    
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, user=None, **kwargs):
         super().__init__(*args, **kwargs)
+        # 중요: 현재 로그인한 유저의 여행만 선택지에 노출
+        if user and not user.is_superuser:
+            self.fields['trip'].queryset = Trip.objects.filter(user=user)
+        else:
+            self.fields['trip'].queryset = Trip.objects.all()
         
+        # 카테고리 정렬 로직 (기존 유지)
         self.fields['category'].queryset = Category.objects.annotate(
-            custom_order=Case(
-                When(name='기타', then=Value(1)),
-                default=Value(0),
-                output_field=IntegerField()
-            )
+            custom_order=Case(When(name='기타', then=Value(1)), default=Value(0), output_field=IntegerField())
         ).order_by('custom_order', 'name')
+
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+        
+    #     self.fields['category'].queryset = Category.objects.annotate(
+    #         custom_order=Case(
+    #             When(name='기타', then=Value(1)),
+    #             default=Value(0),
+    #             output_field=IntegerField()
+    #         )
+    #     ).order_by('custom_order', 'name')
