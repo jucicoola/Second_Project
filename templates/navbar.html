@@ -4,7 +4,7 @@
         
         <ul class="nav-menu" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
             {% if user.is_authenticated %}
-                <li><a href="{% url 'index' %}" style="color: white; text-decoration: none;">대시보드</a></li>
+                <li><a href="{% url 'dashboard:index' %}" style="color: white; text-decoration: none;">대시보드</a></li>
                 <li><a href="{% url 'trip_list' %}" style="color: white; text-decoration: none;">여행</a></li>
                 <li><a href="{% url 'account_list' %}" style="color: white; text-decoration: none;">계좌</a></li>
                 <li><a href="{% url 'transaction_list' %}" style="color: white; text-decoration: none;">거래</a></li>
