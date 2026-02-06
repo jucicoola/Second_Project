@@ -42,3 +42,5 @@
 ## 5. 기타 메모
 - 현재 Chart.js는 CDN 방식을 통해 로드 중
 - 국가별 통계는 `transaction_type='expense'` 데이터만 필터링하여 계산됨
+- 버그 수정 (2026-02-04): 관리자 계정으로 타인 데이터 접근 시 발생하던 PermissionDenied 및 404 에러 해결.
+- 국가별 통계는 transaction_type='expense' 데이터만 필터링하여 계산됨.
