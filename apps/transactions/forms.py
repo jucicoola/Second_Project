@@ -1,5 +1,6 @@
 from django import forms
-from .models import Transaction, Receipt
+from django.db.models import Case, When, Value, IntegerField
+from .models import Transaction, Receipt, Category
 
 class TransactionForm(forms.ModelForm):
     """거래 생성/수정 폼"""
@@ -39,6 +40,15 @@ class TransactionForm(forms.ModelForm):
             self.fields['account'].queryset = user.accounts.filter(is_active=True)
             self.fields['trip'].queryset = user.trips.all()
         self.fields['trip'].required = False
+        
+        # 카테고리 순서: 이름순 정렬, 단 '기타'는 맨 마지막
+        self.fields['category'].queryset = Category.objects.annotate(
+            custom_order=Case(
+                When(name='기타', then=Value(1)),
+                default=Value(0),
+                output_field=IntegerField()
+            )
+        ).order_by('custom_order', 'name')
 
 class TransactionFilterForm(forms.Form):
     """거래 필터 폼"""
@@ -64,5 +74,11 @@ class TransactionFilterForm(forms.Form):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        from .models import Category
-        self.fields['category'].queryset = Category.objects.all()
+        
+        self.fields['category'].queryset = Category.objects.annotate(
+            custom_order=Case(
+                When(name='기타', then=Value(1)),
+                default=Value(0),
+                output_field=IntegerField()
+            )
+        ).order_by('custom_order', 'name')

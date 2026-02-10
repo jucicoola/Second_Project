@@ -5,17 +5,22 @@ from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from core.mixins import UserOwnershipMixin
-from .models import Account
+from .models import Account, Profile
 from .forms import SignUpForm, AccountForm
 
 class SignUpView(CreateView):
     """회원가입 뷰"""
     form_class = SignUpForm
     template_name = 'accounts/signup.html'
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('main')
     
     def form_valid(self, form):
         response = super().form_valid(form)
+        Profile.objects.create(
+            user=self.object,  # 방금 생성된 User
+            age_group=form.cleaned_data['age_group'],
+            gender=form.cleaned_data['gender']
+        )
         login(self.request, self.object)
         messages.success(self.request, '회원가입이 완료되었습니다.')
         return response
@@ -24,6 +29,7 @@ class LoginView(DjangoLoginView):
     """로그인 뷰"""
     template_name = 'accounts/login.html'
     redirect_authenticated_user = True
+    # redirect 다른 url?
     
     def form_valid(self, form):
         messages.success(self.request, f'{form.get_user().username}님, 환영합니다!')
@@ -51,7 +57,7 @@ class AccountDetailView(UserOwnershipMixin, DetailView):
     context_object_name = 'account'
     
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs) #함수로 들어오는 이름 붙은 값들을 전부 받음 (이름 붙은 인자)
         context['transactions'] = self.object.transaction_set.select_related(
             'category', 'trip'
         ).order_by('-occurred_at')[:20]

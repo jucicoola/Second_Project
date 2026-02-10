@@ -2,7 +2,8 @@ from django.views.generic import TemplateView
 from django.contrib.auth.models import User
 from apps.trips.models import Trip
 from apps.transactions.models import Transaction
-from django.db.models import Sum
+from apps.accounts.models import Profile
+from django.db.models import Sum, Count
 
 class MainView(TemplateView):
     template_name = 'main/main.html'
@@ -38,12 +39,33 @@ class MainView(TemplateView):
         # 3. 국가별 여행 지출 TOP 3 (그래프용 데이터)
         top_expenses = (
             Transaction.objects.filter(transaction_type='expense', trip__isnull=False)
-            .values('trip__country')
+            .values('trip__country__name')  
             .annotate(total=Sum('amount'))
             .order_by('-total')[:3]
         )
         
-        context['labels'] = [item['trip__country'] for item in top_expenses]
+        context['labels'] = [item['trip__country__name'] for item in top_expenses]
         context['data'] = [float(item['total']) for item in top_expenses]
+
+        # 4. 모든 연령대별 인기 여행지 TOP 3
+        age_group_data = []
         
-        return context
+        for age_code, age_label in Profile.AGE_CHOICES:
+            # 각 연령대별로 인기 여행지 TOP 3 조회
+            destinations = (
+                Trip.objects
+                .filter(user__profile__age_group=age_code)
+                .values('country__name', 'city__name')
+                .annotate(visit_count=Count('id'))
+                .order_by('-visit_count')
+                [:3]
+            )
+            
+            age_group_data.append({
+                'age_label': age_label,  # '10대', '20대' 등
+                'destinations': list(destinations)  # TOP 3 여행지 리스트
+            })
+        
+        context['age_group_data'] = age_group_data
+        
+        return context 
