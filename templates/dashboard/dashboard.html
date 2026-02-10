@@ -17,7 +17,6 @@
     <div class="stat-card income">
         <h3>이번 달 입금</h3>
         <div class="amount">{{ current_month_summary.total_income|currency }}</div>
-        <div class="count">거래 {{ current_month_summary.transaction_count }}건</div>
     </div>
     
     <div class="stat-card expense">
@@ -26,7 +25,7 @@
     </div>
     
     <div class="stat-card net">
-        <h3>순액</h3>
+        <h3>이번 달 총 잔액</h3>
         <div class="amount">{{ current_month_summary.net_amount|currency }}</div>
     </div>
 </div>

@@ -16,7 +16,7 @@ class TransactionForm(forms.ModelForm):
             'trip': forms.Select(attrs={'class': 'form-control'}),
             'category': forms.Select(attrs={'class': 'form-control'}),
             'transaction_type': forms.Select(attrs={'class': 'form-control'}),
-            'amount': forms.NumberInput(attrs={'class': 'form-control', 'step': '0.01'}),
+            'amount': forms.NumberInput(attrs={'class': 'form-control'}),
             'occurred_at': forms.DateTimeInput(attrs={
                 'class': 'form-control', 
                 'type': 'datetime-local'

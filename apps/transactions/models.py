@@ -43,7 +43,7 @@ class Transaction(models.Model):
     )
     amount = models.DecimalField(
         max_digits=15, 
-        decimal_places=2,
+        decimal_places=0,
         validators=[MinValueValidator(0)],
         verbose_name='금액'
     )

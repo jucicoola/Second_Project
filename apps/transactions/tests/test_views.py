@@ -23,13 +23,13 @@ class TransactionViewTests(TestCase):
 
         self.t1 = make_tx(
             user=self.u1, account=self.a1, category=self.cat_food,
-            amount=Decimal("1000.00"),
+            amount=Decimal("1000"),
             occurred_at=datetime(2026, 2, 1, 12, 0, tzinfo=timezone.utc),
             trip=self.trip1,
         )
         self.t2 = make_tx(
             user=self.u2, account=self.a2, category=self.cat_misc,
-            amount=Decimal("2000.00"),
+            amount=Decimal("2000"),
             occurred_at=datetime(2026, 2, 2, 12, 0, tzinfo=timezone.utc),
         )
 
@@ -67,7 +67,7 @@ class TransactionViewTests(TestCase):
             "trip": self.trip1.id,
             "category": self.cat_food.id,
             "transaction_type": "expense",
-            "amount": "3000.00",
+            "amount": "3000",
             "occurred_at": "2026-02-03T10:30",
             "merchant": "테스트",
             "memo": "메모",
@@ -76,7 +76,7 @@ class TransactionViewTests(TestCase):
         resp = self.client.post(url, payload)
         self.assertEqual(resp.status_code, 302)
 
-        tx = Transaction.objects.get(amount=Decimal("3000.00"))
+        tx = Transaction.objects.get(amount=Decimal("3000"))
         self.assertEqual(tx.user_id, self.u1.id)
         self.assertTrue(Receipt.objects.filter(transaction=tx).exists())
 
@@ -90,7 +90,7 @@ class TransactionViewTests(TestCase):
             "trip": self.trip1.id,
             "category": self.cat_food.id,
             "transaction_type": "expense",
-            "amount": "1000.00",
+            "amount": "1000",
             "occurred_at": "2026-02-01T12:00",
             "merchant": "테스트가맹점",
             "memo": "",

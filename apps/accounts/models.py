@@ -33,7 +33,6 @@ class Profile(models.Model):
     GENDER_CHOICES = [
         ('M', '남성'),
         ('F', '여성'),
-        ('O', '기타'),
     ]
     
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')

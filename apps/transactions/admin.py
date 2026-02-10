@@ -11,7 +11,7 @@ class TransactionAdmin(admin.ModelAdmin):
     list_display = ['occurred_at', 'transaction_type', 'amount', 'category', 
                     'merchant', 'user', 'account']
     list_filter = ['transaction_type', 'category', 'occurred_at']
-    search_fields = ['merchant', 'memo', 'user__username']
+    search_fields = ['category__name', 'merchant', 'user__username']
     readonly_fields = ['created_at', 'updated_at']
     date_hierarchy = 'occurred_at'
 

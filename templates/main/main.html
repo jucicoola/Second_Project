@@ -14,7 +14,7 @@
             <div style="background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 2px 2px 10px rgba(0,0,0,0.05);">
                 
                 <h3 style="margin: 0 0 10px 0; color: #007bff; font-size: 1.4rem;">
-                    {{ trip.name }}
+                    {{ trip.city }} - {{ trip.name }}
                 </h3>
                 
                 <p style="margin: 5px 0;">📅 <strong>여행기간:</strong> {{ trip.start_date }} ~ {{ trip.end_date }}</p>
@@ -93,10 +93,6 @@
                 <div style="font-size: 1.3rem; font-weight: bold;">{{ total_trips|intcomma }}건</div>
             </div>
 
-            <div style="margin-bottom: 0;">
-                <small style="color: #777; font-size: 0.85rem;">누적 지출 금액</small>
-                <div style="font-size: 1.3rem; font-weight: bold; color: #d63031;">{{ total_spent_all|intcomma }}원</div>
-            </div>
         </div>
 
     </div>

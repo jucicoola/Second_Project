@@ -69,7 +69,7 @@ def make_tx(
     account,
     category,
     tx_type="expense",
-    amount=Decimal("1000.00"),
+    amount=Decimal("1000"),
     occurred_at: Optional[datetime] = None,
     trip=None,
 ):

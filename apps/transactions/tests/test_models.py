@@ -26,10 +26,10 @@ class TransactionModelTests(TestCase):
         u = make_user("u1")
         acc = make_account(u)
         cat = make_category("식비")
-        tx = make_tx(user=u, account=acc, category=cat, tx_type="expense", amount=Decimal("1234.00"))
+        tx = make_tx(user=u, account=acc, category=cat, tx_type="expense", amount=Decimal("1234"))
         s = str(tx)
         self.assertIn("출금", s)  # get_transaction_type_display()
-        self.assertIn("1234.00", s)
+        self.assertIn("1234", s)
         self.assertIn("식비", s)
 
     def test_amount_min_value_validator(self):
@@ -41,7 +41,7 @@ class TransactionModelTests(TestCase):
             account=acc,
             category=cat,
             transaction_type="expense",
-            amount=Decimal("-1.00"),
+            amount=Decimal("-1"),
             occurred_at=datetime(2026, 2, 1, 12, 0, tzinfo=timezone.utc),
         )
         with self.assertRaises(ValidationError):
@@ -59,7 +59,7 @@ class TransactionModelTests(TestCase):
         t2 = make_tx(
             user=u, account=acc, category=cat,
             occurred_at=datetime(2026, 2, 2, 12, 0, tzinfo=timezone.utc),
-            amount=Decimal("2000.00"),
+            amount=Decimal("2000"),
         )
 
         qs = list(Transaction.objects.all())
