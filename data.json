@@ -1,0 +1,2342 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$K00ILlEAyWwNc1sN1a4cxC$9P8Rt3rX5JltWjwcL55KrM0M2jVQBj3mdKnb91+Zgds=",
+        "last_login": "2026-02-10T08:29:43.281Z",
+        "is_superuser": true,
+        "username": "test",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-06T06:20:18.306Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$Flze2BemsQEgVvrSjLA3Zp$8GIG4OmbFMJUt+o3euByK8Dquv11wS/pkAhaVARyPDw=",
+        "last_login": "2026-02-09T07:33:51.341Z",
+        "is_superuser": false,
+        "username": "가나다",
+        "first_name": "",
+        "last_name": "",
+        "email": "abc@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T06:18:54.864Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$WZIYoMBbUtKKUXUbgVwmIF$xOl2EXjIKEIuyn24w4ztc4aSZpz3lztKW8fs6dYT8sY=",
+        "last_login": "2026-02-09T13:56:47.022Z",
+        "is_superuser": false,
+        "username": "김철수",
+        "first_name": "",
+        "last_name": "",
+        "email": "chulsoo@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T13:56:46.649Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$q2VBiBwVBU9tQ7oHQAdtir$lWHcR5lWSYY7r/O1WLJ2ruRf6BTAbitSTcHMRPB4kgY=",
+        "last_login": "2026-02-09T14:03:29.743Z",
+        "is_superuser": false,
+        "username": "이민지",
+        "first_name": "",
+        "last_name": "",
+        "email": "minji@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T14:03:29.388Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$mZA6vFU4Jx7z04HbPn91A0$5/hqV4iXFl43MRAjICSZ65N0TDmbfF/yT9QP310WGzQ=",
+        "last_login": "2026-02-09T14:06:47.256Z",
+        "is_superuser": false,
+        "username": "권지용",
+        "first_name": "",
+        "last_name": "",
+        "email": "gdragon@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T14:06:46.916Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$6wOnuBsiexut6vJcZ3GSLT$PCfDZnYs0vW45RXe4ODNeEePbMdlEHGGrlWj+quiDj0=",
+        "last_login": "2026-02-09T14:12:13.769Z",
+        "is_superuser": false,
+        "username": "공지철",
+        "first_name": "",
+        "last_name": "",
+        "email": "gichul@hanmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T14:12:13.402Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$TtTEHXDXCUXu9KVgVDfMHv$BxwRit7iUrheqUGo843regrT8Uda/fqRUzXNnAqY51E=",
+        "last_login": "2026-02-09T14:14:14.451Z",
+        "is_superuser": false,
+        "username": "고윤정",
+        "first_name": "",
+        "last_name": "",
+        "email": "kyj@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T14:14:14.116Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$tfC5HvjTcIth6GvAgw3xfz$qTlxLoKfVxd3PT6WyThMVU8AoGzAAwvbder9pBC7VlU=",
+        "last_login": "2026-02-09T14:18:26.180Z",
+        "is_superuser": false,
+        "username": "김선호",
+        "first_name": "",
+        "last_name": "",
+        "email": "ksh@nate.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T14:18:25.852Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$yEnjqQFzmVcRm6Sa84FJvq$fMhGWA1Ce7E0STp3kRQ0sBYFLe4JGVmpMXBLTm4kGlo=",
+        "last_login": "2026-02-09T14:21:29.049Z",
+        "is_superuser": false,
+        "username": "안유진",
+        "first_name": "",
+        "last_name": "",
+        "email": "yujin@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T14:21:28.727Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$tA43eBYjZ6IiZxd0q8vnXa$R1w1CmOF0vKDPR3WCFRoIhWA1Z4jOnEHtmGkxdBL+dM=",
+        "last_login": "2026-02-09T14:47:40.352Z",
+        "is_superuser": false,
+        "username": "이준호",
+        "first_name": "",
+        "last_name": "",
+        "email": "junho@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T14:26:29.161Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$720000$bkYRqE8F8HzWE5hqcjWhuN$RvGoPjvsDQRxGpLNUUxyl7Mv91UhojOmSo6Z04st/Ag=",
+        "last_login": "2026-02-10T08:40:51.789Z",
+        "is_superuser": false,
+        "username": "김여행",
+        "first_name": "",
+        "last_name": "",
+        "email": "travel@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-09T15:09:31.329Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "1ihmzrwqsxvw60p00sye5zd5sh9ibt00",
+    "fields": {
+        "session_data": ".eJxVjLsOAiEQAP-F2hB2PWCxtPcbyB4Lcmq45B6V8d8NyRXazkzmrSLvW437mpc4ibooAHX6hSOnZ27dyIPbfdZpbtsyjbon-rCrvs2SX9ej_RtUXmv_GiJInhwOggHB2rMVyGFkT-Js9mTNUIi55ISegQI6XxCIQykGRX2-2Hc3WQ:1vpjIh:4625k7yKeUEOJ7GVxFLgNvVpj7rUH2MsVpTME07vAR8",
+        "expire_date": "2026-02-24T08:40:51.797Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ahlhm5n62s4ritsadwusswhmj0nags29",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyFAQYpH734D2WUXqRqalPZk_Hdp0oNeJpl5M_MWEba1xK3xEicSF6HF6TdDSE-uO6AH1Pss01zXZUK5V-RBm7zNxK_r0f07KNBKX_tsKYHKY9BhVOjIeyaLzAEGdk7Z1IlNZz_kYECbbjMmRV2dsYTi8wX1Uzh3:1voFUx:RZbzxvqwoLti_wfUhaLfxiy7A7uUslSS38yMB98vGO0",
+        "expire_date": "2026-02-20T06:39:23.132Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "name": "여행적금",
+        "bank_name": "신한은행",
+        "account_number": "110-123-123456",
+        "is_active": true,
+        "created_at": "2026-02-09T07:35:44.108Z",
+        "updated_at": "2026-02-09T07:35:44.108Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "name": "입출금계좌",
+        "bank_name": "하나은행",
+        "account_number": "164-548-154847-1",
+        "is_active": true,
+        "created_at": "2026-02-09T13:47:57.800Z",
+        "updated_at": "2026-02-09T13:47:57.800Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "name": "용돈 통장",
+        "bank_name": "우리은행",
+        "account_number": "1002-4581-6581-0",
+        "is_active": true,
+        "created_at": "2026-02-09T13:57:37.216Z",
+        "updated_at": "2026-02-09T13:57:37.216Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "이민지"
+        ],
+        "name": "모바일통장",
+        "bank_name": "새마을금고",
+        "account_number": "1009-4581-4589-1",
+        "is_active": true,
+        "created_at": "2026-02-09T14:04:25.440Z",
+        "updated_at": "2026-02-09T14:04:25.440Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "name": "여행통장",
+        "bank_name": "국민은행",
+        "account_number": "546985-01-5498-2",
+        "is_active": true,
+        "created_at": "2026-02-09T14:07:56.762Z",
+        "updated_at": "2026-02-09T14:07:56.763Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "name": "입출금통장",
+        "bank_name": "하나은행",
+        "account_number": "164-7598-4152",
+        "is_active": true,
+        "created_at": "2026-02-09T14:08:11.395Z",
+        "updated_at": "2026-02-09T14:08:11.395Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "name": "기타",
+        "bank_name": "우리은행",
+        "account_number": "1002-4825-6415-6",
+        "is_active": true,
+        "created_at": "2026-02-09T14:08:27.606Z",
+        "updated_at": "2026-02-09T14:08:27.606Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "공지철"
+        ],
+        "name": "내통장",
+        "bank_name": "신한은행",
+        "account_number": "110-458-79548",
+        "is_active": true,
+        "created_at": "2026-02-09T14:13:04.276Z",
+        "updated_at": "2026-02-09T14:13:04.276Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "고윤정"
+        ],
+        "name": "여행통장",
+        "bank_name": "SB저축은행",
+        "account_number": "348-45478-457",
+        "is_active": true,
+        "created_at": "2026-02-09T14:15:47.937Z",
+        "updated_at": "2026-02-09T14:15:47.937Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "김선호"
+        ],
+        "name": "자유통장",
+        "bank_name": "신한은행",
+        "account_number": "110-859-4567",
+        "is_active": true,
+        "created_at": "2026-02-09T14:19:07.160Z",
+        "updated_at": "2026-02-09T14:19:07.160Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "name": "입출금통장",
+        "bank_name": "우리은행",
+        "account_number": "1002-451-78542",
+        "is_active": true,
+        "created_at": "2026-02-09T14:22:22.502Z",
+        "updated_at": "2026-02-09T14:22:22.502Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "이준호"
+        ],
+        "name": "입출금통장",
+        "bank_name": "새마을금고",
+        "account_number": "9003-2789-5428-1",
+        "is_active": true,
+        "created_at": "2026-02-09T14:27:14.191Z",
+        "updated_at": "2026-02-09T14:27:14.191Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "name": "여행통장",
+        "bank_name": "신한은행",
+        "account_number": "110-948-48157",
+        "is_active": true,
+        "created_at": "2026-02-09T15:52:00.115Z",
+        "updated_at": "2026-02-09T15:52:00.115Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "name": "비상금통장",
+        "bank_name": "국민은행",
+        "account_number": "533845-05-987425",
+        "is_active": true,
+        "created_at": "2026-02-09T15:52:15.215Z",
+        "updated_at": "2026-02-09T15:52:15.215Z"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "name": "입출금통장",
+        "bank_name": "국민은행",
+        "account_number": "533874-44-45198",
+        "is_active": true,
+        "created_at": "2026-02-09T15:54:49.838Z",
+        "updated_at": "2026-02-09T15:54:49.838Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "age_group": "10s",
+        "gender": "M",
+        "created_at": "2026-02-09T06:18:55.131Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "age_group": "10s",
+        "gender": "F",
+        "created_at": "2026-02-09T13:56:47.011Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "이민지"
+        ],
+        "age_group": "20s",
+        "gender": "F",
+        "created_at": "2026-02-09T14:03:29.730Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "age_group": "20s",
+        "gender": "M",
+        "created_at": "2026-02-09T14:06:47.245Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "공지철"
+        ],
+        "age_group": "10s",
+        "gender": "M",
+        "created_at": "2026-02-09T14:12:13.760Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "고윤정"
+        ],
+        "age_group": "10s",
+        "gender": "F",
+        "created_at": "2026-02-09T14:14:14.443Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "김선호"
+        ],
+        "age_group": "10s",
+        "gender": "M",
+        "created_at": "2026-02-09T14:18:26.171Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "age_group": "20s",
+        "gender": "F",
+        "created_at": "2026-02-09T14:21:29.039Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "이준호"
+        ],
+        "age_group": "20s",
+        "gender": "M",
+        "created_at": "2026-02-09T14:26:29.511Z"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "age_group": "20s",
+        "gender": "F",
+        "created_at": "2026-02-09T15:09:31.659Z"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 1,
+    "fields": {
+        "name": "일본"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 2,
+    "fields": {
+        "name": "미국"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 3,
+    "fields": {
+        "name": "프랑스"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 4,
+    "fields": {
+        "name": "이탈리아"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 5,
+    "fields": {
+        "name": "스위스"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 6,
+    "fields": {
+        "name": "호주"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 7,
+    "fields": {
+        "name": "스페인"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 8,
+    "fields": {
+        "name": "독일"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 9,
+    "fields": {
+        "name": "베트남"
+    }
+},
+{
+    "model": "trips.country",
+    "pk": 10,
+    "fields": {
+        "name": "태국"
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 1,
+    "fields": {
+        "name": "도쿄",
+        "country": 1
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 2,
+    "fields": {
+        "name": "오사카",
+        "country": 1
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 3,
+    "fields": {
+        "name": "교토",
+        "country": 1
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 4,
+    "fields": {
+        "name": "후쿠오카",
+        "country": 1
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 5,
+    "fields": {
+        "name": "삿포로",
+        "country": 1
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 6,
+    "fields": {
+        "name": "나고야",
+        "country": 1
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 7,
+    "fields": {
+        "name": "오키나와",
+        "country": 1
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 8,
+    "fields": {
+        "name": "뉴욕",
+        "country": 2
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 9,
+    "fields": {
+        "name": "로스앤젤레스",
+        "country": 2
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 10,
+    "fields": {
+        "name": "샌프란시스코",
+        "country": 2
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 11,
+    "fields": {
+        "name": "라스베가스",
+        "country": 2
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 12,
+    "fields": {
+        "name": "시애틀",
+        "country": 2
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 13,
+    "fields": {
+        "name": "시카고",
+        "country": 2
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 14,
+    "fields": {
+        "name": "하와이",
+        "country": 2
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 15,
+    "fields": {
+        "name": "파리",
+        "country": 3
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 16,
+    "fields": {
+        "name": "니스",
+        "country": 3
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 17,
+    "fields": {
+        "name": "칸",
+        "country": 3
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 18,
+    "fields": {
+        "name": "리옹",
+        "country": 3
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 19,
+    "fields": {
+        "name": "마르세유",
+        "country": 3
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 20,
+    "fields": {
+        "name": "보르도",
+        "country": 3
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 21,
+    "fields": {
+        "name": "로마",
+        "country": 4
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 22,
+    "fields": {
+        "name": "베네치아",
+        "country": 4
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 23,
+    "fields": {
+        "name": "피렌체",
+        "country": 4
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 24,
+    "fields": {
+        "name": "밀라노",
+        "country": 4
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 25,
+    "fields": {
+        "name": "나폴리",
+        "country": 4
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 26,
+    "fields": {
+        "name": "베로나",
+        "country": 4
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 27,
+    "fields": {
+        "name": "취리히",
+        "country": 5
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 28,
+    "fields": {
+        "name": "제네바",
+        "country": 5
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 29,
+    "fields": {
+        "name": "인터라켄",
+        "country": 5
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 30,
+    "fields": {
+        "name": "루체른",
+        "country": 5
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 31,
+    "fields": {
+        "name": "베른",
+        "country": 5
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 32,
+    "fields": {
+        "name": "체르마트",
+        "country": 5
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 33,
+    "fields": {
+        "name": "시드니",
+        "country": 6
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 34,
+    "fields": {
+        "name": "멜버른",
+        "country": 6
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 35,
+    "fields": {
+        "name": "골드코스트",
+        "country": 6
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 36,
+    "fields": {
+        "name": "브리즈번",
+        "country": 6
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 37,
+    "fields": {
+        "name": "케언즈",
+        "country": 6
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 38,
+    "fields": {
+        "name": "퍼스",
+        "country": 6
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 39,
+    "fields": {
+        "name": "바르셀로나",
+        "country": 7
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 40,
+    "fields": {
+        "name": "마드리드",
+        "country": 7
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 41,
+    "fields": {
+        "name": "세비야",
+        "country": 7
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 42,
+    "fields": {
+        "name": "그라나다",
+        "country": 7
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 43,
+    "fields": {
+        "name": "발렌시아",
+        "country": 7
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 44,
+    "fields": {
+        "name": "톨레도",
+        "country": 7
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 45,
+    "fields": {
+        "name": "베를린",
+        "country": 8
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 46,
+    "fields": {
+        "name": "뮌헨",
+        "country": 8
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 47,
+    "fields": {
+        "name": "프랑크푸르트",
+        "country": 8
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 48,
+    "fields": {
+        "name": "하이델베르크",
+        "country": 8
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 49,
+    "fields": {
+        "name": "퀼른",
+        "country": 8
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 50,
+    "fields": {
+        "name": "함부르크",
+        "country": 8
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 51,
+    "fields": {
+        "name": "하노이",
+        "country": 9
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 52,
+    "fields": {
+        "name": "호치민",
+        "country": 9
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 53,
+    "fields": {
+        "name": "다낭",
+        "country": 9
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 54,
+    "fields": {
+        "name": "나트랑",
+        "country": 9
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 55,
+    "fields": {
+        "name": "호이안",
+        "country": 9
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 56,
+    "fields": {
+        "name": "후에",
+        "country": 9
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 57,
+    "fields": {
+        "name": "방콕",
+        "country": 10
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 58,
+    "fields": {
+        "name": "푸켓",
+        "country": 10
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 59,
+    "fields": {
+        "name": "치앙마이",
+        "country": 10
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 60,
+    "fields": {
+        "name": "파타야",
+        "country": 10
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 61,
+    "fields": {
+        "name": "끄라비",
+        "country": 10
+    }
+},
+{
+    "model": "trips.city",
+    "pk": 62,
+    "fields": {
+        "name": "아유타야",
+        "country": 10
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "name": "가족여행",
+        "country": 10,
+        "city": 59,
+        "start_date": "2026-03-23",
+        "end_date": "2026-03-29",
+        "memo": "",
+        "created_at": "2026-02-09T07:35:11.494Z",
+        "updated_at": "2026-02-09T07:35:11.494Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "name": "겨울방학 여행",
+        "country": 6,
+        "city": 38,
+        "start_date": "2025-12-15",
+        "end_date": "2025-12-20",
+        "memo": "5박6일 여행",
+        "created_at": "2026-02-09T13:47:15.149Z",
+        "updated_at": "2026-02-09T13:47:15.149Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "name": "형제여행",
+        "country": 10,
+        "city": 59,
+        "start_date": "2025-09-01",
+        "end_date": "2025-09-05",
+        "memo": "4박5일 형과 여행",
+        "created_at": "2026-02-09T13:57:20.000Z",
+        "updated_at": "2026-02-09T13:57:20.000Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "이민지"
+        ],
+        "name": "도쿄여행",
+        "country": 1,
+        "city": 1,
+        "start_date": "2026-01-26",
+        "end_date": "2026-01-29",
+        "memo": "친구랑 10주년 여행",
+        "created_at": "2026-02-09T14:03:59.847Z",
+        "updated_at": "2026-02-09T14:03:59.847Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "name": "휴가",
+        "country": 9,
+        "city": 53,
+        "start_date": "2026-02-04",
+        "end_date": "2026-02-07",
+        "memo": "",
+        "created_at": "2026-02-09T14:07:16.782Z",
+        "updated_at": "2026-02-09T14:07:16.782Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "name": "휴가2",
+        "country": 1,
+        "city": 1,
+        "start_date": "2026-02-25",
+        "end_date": "2026-02-28",
+        "memo": "",
+        "created_at": "2026-02-09T14:07:37.114Z",
+        "updated_at": "2026-02-09T14:07:37.114Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "공지철"
+        ],
+        "name": "태국여행",
+        "country": 10,
+        "city": 59,
+        "start_date": "2026-02-12",
+        "end_date": "2026-02-15",
+        "memo": "가족여행",
+        "created_at": "2026-02-09T14:12:45.293Z",
+        "updated_at": "2026-02-09T14:12:45.293Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "고윤정"
+        ],
+        "name": "첫 해외여행",
+        "country": 1,
+        "city": 5,
+        "start_date": "2026-02-27",
+        "end_date": "2026-03-02",
+        "memo": "",
+        "created_at": "2026-02-09T14:14:55.083Z",
+        "updated_at": "2026-02-09T14:14:55.083Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "김선호"
+        ],
+        "name": "삿포로 눈여행",
+        "country": 1,
+        "city": 5,
+        "start_date": "2026-02-22",
+        "end_date": "2026-02-25",
+        "memo": "오타루, 비에이 포함",
+        "created_at": "2026-02-09T14:18:54.332Z",
+        "updated_at": "2026-02-09T14:18:54.332Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "name": "겨울휴가",
+        "country": 9,
+        "city": 53,
+        "start_date": "2026-01-01",
+        "end_date": "2026-01-05",
+        "memo": "",
+        "created_at": "2026-02-09T14:22:06.699Z",
+        "updated_at": "2026-02-09T14:22:06.699Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "name": "스페인투어",
+        "country": 7,
+        "city": 39,
+        "start_date": "2026-03-02",
+        "end_date": "2026-03-10",
+        "memo": "",
+        "created_at": "2026-02-09T14:24:54.728Z",
+        "updated_at": "2026-02-09T14:24:54.728Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "이준호"
+        ],
+        "name": "TOKYO",
+        "country": 1,
+        "city": 1,
+        "start_date": "2026-02-10",
+        "end_date": "2026-02-14",
+        "memo": "도쿄 소도시 포함",
+        "created_at": "2026-02-09T14:27:01.565Z",
+        "updated_at": "2026-02-09T14:27:01.565Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "name": "가족여행",
+        "country": 4,
+        "city": 21,
+        "start_date": "2026-04-27",
+        "end_date": "2026-05-06",
+        "memo": "8박 10일 4인 가족여행",
+        "created_at": "2026-02-09T15:42:59.402Z",
+        "updated_at": "2026-02-09T15:44:03.374Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "name": "출장 후 자유여행",
+        "country": 2,
+        "city": 8,
+        "start_date": "2026-01-05",
+        "end_date": "2026-01-08",
+        "memo": "26.01.03 - 01.04 뉴욕 출장 후 3박4일 추가 자유여행 일정",
+        "created_at": "2026-02-09T15:43:54.071Z",
+        "updated_at": "2026-02-09T15:43:54.071Z"
+    }
+},
+{
+    "model": "trips.trip",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "name": "겨울 휴가",
+        "country": 6,
+        "city": 33,
+        "start_date": "2025-12-23",
+        "end_date": "2025-12-29",
+        "memo": "6박7일",
+        "created_at": "2026-02-09T15:45:09.437Z",
+        "updated_at": "2026-02-09T15:45:09.437Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 1,
+    "fields": {
+        "name": "식비",
+        "description": "식사, 카페, 음료 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 2,
+    "fields": {
+        "name": "교통비",
+        "description": "택시, 버스, 지하철, 항공권, 렌터카 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 3,
+    "fields": {
+        "name": "숙박비",
+        "description": "호텔, 게스트하우스, 에어비앤비 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 4,
+    "fields": {
+        "name": "쇼핑",
+        "description": "의류, 기념품, 잡화 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 5,
+    "fields": {
+        "name": "관광",
+        "description": "입장료, 투어, 액티비티 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 6,
+    "fields": {
+        "name": "통신비",
+        "description": "로밍, 유심, 포켓와이파이 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 7,
+    "fields": {
+        "name": "보험",
+        "description": "여행자보험 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 8,
+    "fields": {
+        "name": "의료",
+        "description": "병원, 약국 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 9,
+    "fields": {
+        "name": "엔터테인먼트",
+        "description": "공연, 영화, 클럽 등",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.category",
+    "pk": 10,
+    "fields": {
+        "name": "기타",
+        "description": "기타 지출",
+        "created_at": "2026-02-05T10:00:00Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "account": 3,
+        "trip": 3,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "2400000",
+        "occurred_at": "2026-02-09T07:36:00Z",
+        "merchant": "대한항공",
+        "memo": "",
+        "created_at": "2026-02-09T07:36:39.605Z",
+        "updated_at": "2026-02-09T07:37:02.202Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "account": 3,
+        "trip": 3,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "3000000",
+        "occurred_at": "2026-02-01T12:37:00Z",
+        "merchant": "호텔",
+        "memo": "",
+        "created_at": "2026-02-09T07:37:55.081Z",
+        "updated_at": "2026-02-09T07:37:55.081Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "account": 3,
+        "trip": 3,
+        "category": 6,
+        "transaction_type": "expense",
+        "amount": "50000",
+        "occurred_at": "2026-02-07T10:38:00Z",
+        "merchant": "esim",
+        "memo": "",
+        "created_at": "2026-02-09T07:38:27.476Z",
+        "updated_at": "2026-02-09T07:38:27.476Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "account": 4,
+        "trip": 3,
+        "category": 7,
+        "transaction_type": "expense",
+        "amount": "50000",
+        "occurred_at": "2026-02-01T13:49:00Z",
+        "merchant": "한화손해보험",
+        "memo": "여행자보험 단체(4인)",
+        "created_at": "2026-02-09T13:53:29.079Z",
+        "updated_at": "2026-02-09T13:53:29.079Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "account": 3,
+        "trip": 3,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "100000",
+        "occurred_at": "2026-02-02T07:54:00Z",
+        "merchant": "공항택시",
+        "memo": "공항->숙소 이동 택시",
+        "created_at": "2026-02-09T13:54:19.736Z",
+        "updated_at": "2026-02-09T13:54:19.736Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "account": 3,
+        "trip": 4,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "700000",
+        "occurred_at": "2025-09-17T07:54:00Z",
+        "merchant": "아시아나항공",
+        "memo": "왕복 항공권",
+        "created_at": "2026-02-09T13:54:55.928Z",
+        "updated_at": "2026-02-09T13:54:55.928Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "가나다"
+        ],
+        "account": 4,
+        "trip": 4,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "2750000",
+        "occurred_at": "2025-10-28T12:55:00Z",
+        "merchant": "에어비앤비",
+        "memo": "",
+        "created_at": "2026-02-09T13:55:39.355Z",
+        "updated_at": "2026-02-09T13:55:39.355Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "account": 5,
+        "trip": 5,
+        "category": 7,
+        "transaction_type": "expense",
+        "amount": "20000",
+        "occurred_at": "2025-08-29T13:57:00Z",
+        "merchant": "KB손해보험",
+        "memo": "여행자보험 2명",
+        "created_at": "2026-02-09T13:58:15.320Z",
+        "updated_at": "2026-02-09T13:58:15.320Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "account": 5,
+        "trip": 5,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "600000",
+        "occurred_at": "2025-08-19T13:58:00Z",
+        "merchant": "아고다",
+        "memo": "5박6일 호텔(2인)",
+        "created_at": "2026-02-09T13:58:55.538Z",
+        "updated_at": "2026-02-09T13:58:55.538Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "account": 5,
+        "trip": 5,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "1245000",
+        "occurred_at": "2025-07-25T13:59:00Z",
+        "merchant": "진에어",
+        "memo": "왕복 2인 항공권",
+        "created_at": "2026-02-09T13:59:30.442Z",
+        "updated_at": "2026-02-09T13:59:30.442Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "account": 5,
+        "trip": 5,
+        "category": 1,
+        "transaction_type": "expense",
+        "amount": "15000",
+        "occurred_at": "2025-09-01T13:59:00Z",
+        "merchant": "카오쏘이",
+        "memo": "팟타이, 카오팟",
+        "created_at": "2026-02-09T14:00:28.799Z",
+        "updated_at": "2026-02-09T14:00:28.799Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "account": 5,
+        "trip": 5,
+        "category": 1,
+        "transaction_type": "expense",
+        "amount": "8800",
+        "occurred_at": "2025-09-04T14:00:00Z",
+        "merchant": "쿤캐쥬스",
+        "memo": "망고 스무디볼, 스트로베리 스무디볼",
+        "created_at": "2026-02-09T14:02:02.515Z",
+        "updated_at": "2026-02-09T14:02:02.515Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "김철수"
+        ],
+        "account": 5,
+        "trip": 5,
+        "category": 10,
+        "transaction_type": "income",
+        "amount": "500000",
+        "occurred_at": "2025-08-31T14:02:00Z",
+        "merchant": "",
+        "memo": "용돈",
+        "created_at": "2026-02-09T14:02:41.492Z",
+        "updated_at": "2026-02-09T14:02:41.492Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "이민지"
+        ],
+        "account": 6,
+        "trip": 6,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "550000",
+        "occurred_at": "2026-01-12T14:04:00Z",
+        "merchant": "에어부산",
+        "memo": "",
+        "created_at": "2026-02-09T14:04:54.638Z",
+        "updated_at": "2026-02-09T14:04:54.638Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "이민지"
+        ],
+        "account": 6,
+        "trip": 6,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "580000",
+        "occurred_at": "2026-01-17T14:05:00Z",
+        "merchant": "호텔즈닷컴",
+        "memo": "도쿄역 부근 호텔",
+        "created_at": "2026-02-09T14:05:26.904Z",
+        "updated_at": "2026-02-09T14:05:26.904Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "account": 9,
+        "trip": 7,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "1200000",
+        "occurred_at": "2026-01-06T14:08:00Z",
+        "merchant": "대한항공",
+        "memo": "",
+        "created_at": "2026-02-09T14:08:59.448Z",
+        "updated_at": "2026-02-09T14:08:59.448Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "account": 7,
+        "trip": 7,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "5000000",
+        "occurred_at": "2026-01-22T14:09:00Z",
+        "merchant": "hotel",
+        "memo": "",
+        "created_at": "2026-02-09T14:09:28.229Z",
+        "updated_at": "2026-02-09T14:09:28.229Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "account": 8,
+        "trip": 7,
+        "category": 4,
+        "transaction_type": "expense",
+        "amount": "2000000",
+        "occurred_at": "2026-02-04T14:09:00Z",
+        "merchant": "백화점",
+        "memo": "",
+        "created_at": "2026-02-09T14:09:51.328Z",
+        "updated_at": "2026-02-09T14:09:51.328Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "account": 7,
+        "trip": 8,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "4000000",
+        "occurred_at": "2026-01-19T14:10:00Z",
+        "merchant": "아고다",
+        "memo": "",
+        "created_at": "2026-02-09T14:10:33.406Z",
+        "updated_at": "2026-02-09T14:10:33.406Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "account": 7,
+        "trip": 8,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "1450000",
+        "occurred_at": "2026-02-09T14:10:00Z",
+        "merchant": "아시아나항공",
+        "memo": "",
+        "created_at": "2026-02-09T14:10:51.756Z",
+        "updated_at": "2026-02-09T14:10:51.756Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 23,
+    "fields": {
+        "user": [
+            "권지용"
+        ],
+        "account": 7,
+        "trip": 8,
+        "category": 7,
+        "transaction_type": "expense",
+        "amount": "50000",
+        "occurred_at": "2026-02-01T14:11:00Z",
+        "merchant": "KB손해보험",
+        "memo": "",
+        "created_at": "2026-02-09T14:11:21.061Z",
+        "updated_at": "2026-02-09T14:11:21.061Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "공지철"
+        ],
+        "account": 10,
+        "trip": 9,
+        "category": 6,
+        "transaction_type": "expense",
+        "amount": "20000",
+        "occurred_at": "2026-02-04T14:13:00Z",
+        "merchant": "esim",
+        "memo": "",
+        "created_at": "2026-02-09T14:13:25.722Z",
+        "updated_at": "2026-02-09T14:13:25.722Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "고윤정"
+        ],
+        "account": 11,
+        "trip": 10,
+        "category": 7,
+        "transaction_type": "expense",
+        "amount": "23400",
+        "occurred_at": "2026-02-07T14:16:00Z",
+        "merchant": "한화손해보험",
+        "memo": "2인 여행자보험",
+        "created_at": "2026-02-09T14:16:09.055Z",
+        "updated_at": "2026-02-09T14:16:21.421Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "고윤정"
+        ],
+        "account": 11,
+        "trip": 10,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "610000",
+        "occurred_at": "2026-02-05T14:16:00Z",
+        "merchant": "스카이스캐너",
+        "memo": "진에어 왕복",
+        "created_at": "2026-02-09T14:17:02.595Z",
+        "updated_at": "2026-02-09T14:17:02.595Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 27,
+    "fields": {
+        "user": [
+            "고윤정"
+        ],
+        "account": 11,
+        "trip": 10,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "680000",
+        "occurred_at": "2026-02-07T14:17:00Z",
+        "merchant": "AGODA",
+        "memo": "스스키노 근처 3박4일",
+        "created_at": "2026-02-09T14:17:29.904Z",
+        "updated_at": "2026-02-09T14:17:29.904Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 28,
+    "fields": {
+        "user": [
+            "고윤정"
+        ],
+        "account": 11,
+        "trip": 10,
+        "category": 5,
+        "transaction_type": "expense",
+        "amount": "85000",
+        "occurred_at": "2026-02-08T09:17:00Z",
+        "merchant": "마이리얼트립",
+        "memo": "비에이투어",
+        "created_at": "2026-02-09T14:17:53.460Z",
+        "updated_at": "2026-02-09T14:17:53.460Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 29,
+    "fields": {
+        "user": [
+            "김선호"
+        ],
+        "account": 12,
+        "trip": 11,
+        "category": 6,
+        "transaction_type": "expense",
+        "amount": "8000",
+        "occurred_at": "2026-02-09T09:19:00Z",
+        "merchant": "도깨비톡",
+        "memo": "esim 3박4일",
+        "created_at": "2026-02-09T14:19:41.026Z",
+        "updated_at": "2026-02-09T14:19:41.026Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 30,
+    "fields": {
+        "user": [
+            "김선호"
+        ],
+        "account": 12,
+        "trip": 11,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "346000",
+        "occurred_at": "2026-02-05T14:19:00Z",
+        "merchant": "제주항공",
+        "memo": "",
+        "created_at": "2026-02-09T14:20:18.696Z",
+        "updated_at": "2026-02-09T14:20:18.696Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 31,
+    "fields": {
+        "user": [
+            "김선호"
+        ],
+        "account": 12,
+        "trip": 11,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "600000",
+        "occurred_at": "2026-02-08T03:20:00Z",
+        "merchant": "호텔즈컴바인",
+        "memo": "삿포로역",
+        "created_at": "2026-02-09T14:20:49.142Z",
+        "updated_at": "2026-02-09T14:20:49.142Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 32,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "account": 13,
+        "trip": 12,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "2000000",
+        "occurred_at": "2025-12-31T14:22:00Z",
+        "merchant": "대한항공",
+        "memo": "대한항공 왕복",
+        "created_at": "2026-02-09T14:22:49.794Z",
+        "updated_at": "2026-02-09T14:22:49.794Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 33,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "account": 13,
+        "trip": 12,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "4500000",
+        "occurred_at": "2025-12-28T14:23:00Z",
+        "merchant": "힐튼",
+        "memo": "",
+        "created_at": "2026-02-09T14:23:36.562Z",
+        "updated_at": "2026-02-09T14:23:36.562Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 34,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "account": 13,
+        "trip": 12,
+        "category": 4,
+        "transaction_type": "expense",
+        "amount": "300000",
+        "occurred_at": "2026-01-03T14:23:00Z",
+        "merchant": "쇼핑몰",
+        "memo": "기념품 구매",
+        "created_at": "2026-02-09T14:24:08.177Z",
+        "updated_at": "2026-02-09T14:24:08.177Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 35,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "account": 13,
+        "trip": 13,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "1850000",
+        "occurred_at": "2026-02-11T06:25:00Z",
+        "merchant": "대한항공",
+        "memo": "",
+        "created_at": "2026-02-09T14:25:24.007Z",
+        "updated_at": "2026-02-09T14:25:24.007Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 36,
+    "fields": {
+        "user": [
+            "안유진"
+        ],
+        "account": 13,
+        "trip": 13,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "2380000",
+        "occurred_at": "2026-02-09T14:25:00Z",
+        "merchant": "에어비앤비",
+        "memo": "",
+        "created_at": "2026-02-09T14:25:50.307Z",
+        "updated_at": "2026-02-09T14:25:50.307Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 37,
+    "fields": {
+        "user": [
+            "이준호"
+        ],
+        "account": 14,
+        "trip": 14,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "550000",
+        "occurred_at": "2026-01-07T14:27:00Z",
+        "merchant": "스카이스캐너",
+        "memo": "",
+        "created_at": "2026-02-09T14:27:38.460Z",
+        "updated_at": "2026-02-09T14:27:38.460Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 38,
+    "fields": {
+        "user": [
+            "이준호"
+        ],
+        "account": 14,
+        "trip": 14,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "450000",
+        "occurred_at": "2026-01-24T14:27:00Z",
+        "merchant": "호텔",
+        "memo": "",
+        "created_at": "2026-02-09T14:27:56.187Z",
+        "updated_at": "2026-02-09T14:27:56.187Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 39,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 17,
+        "trip": 15,
+        "category": 2,
+        "transaction_type": "expense",
+        "amount": "1860000",
+        "occurred_at": "2026-02-18T15:55:00Z",
+        "merchant": "대한항공",
+        "memo": "1인 왕복항공권",
+        "created_at": "2026-02-09T15:57:21.698Z",
+        "updated_at": "2026-02-09T15:57:21.698Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 40,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 19,
+        "trip": 15,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "5000000",
+        "occurred_at": "2025-12-15T15:57:00Z",
+        "merchant": "에어비앤비",
+        "memo": "4인 총 숙박비",
+        "created_at": "2026-02-09T15:57:54.153Z",
+        "updated_at": "2026-02-09T15:59:29.123Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 41,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 19,
+        "trip": 16,
+        "category": 1,
+        "transaction_type": "expense",
+        "amount": "300000",
+        "occurred_at": "2026-01-06T15:58:00Z",
+        "merchant": "호텔 라운지",
+        "memo": "",
+        "created_at": "2026-02-09T15:58:30.032Z",
+        "updated_at": "2026-02-09T15:58:30.032Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 42,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 18,
+        "trip": 16,
+        "category": 4,
+        "transaction_type": "expense",
+        "amount": "150000",
+        "occurred_at": "2026-01-05T10:58:00Z",
+        "merchant": "백화점",
+        "memo": "옷 구입",
+        "created_at": "2026-02-09T15:59:10.806Z",
+        "updated_at": "2026-02-09T15:59:10.806Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 43,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 17,
+        "trip": 17,
+        "category": 5,
+        "transaction_type": "expense",
+        "amount": "1130000",
+        "occurred_at": "2025-09-22T15:59:00Z",
+        "merchant": "아시아나항공",
+        "memo": "1인 왕복 항공권",
+        "created_at": "2026-02-09T16:00:03.797Z",
+        "updated_at": "2026-02-09T16:00:03.797Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 44,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 17,
+        "trip": 17,
+        "category": 3,
+        "transaction_type": "expense",
+        "amount": "2000000",
+        "occurred_at": "2025-11-01T10:00:00Z",
+        "merchant": "아고다",
+        "memo": "",
+        "created_at": "2026-02-09T16:00:35.405Z",
+        "updated_at": "2026-02-09T16:00:35.405Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 45,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 19,
+        "trip": 17,
+        "category": 6,
+        "transaction_type": "expense",
+        "amount": "38000",
+        "occurred_at": "2025-11-17T16:01:00Z",
+        "merchant": "esim",
+        "memo": "",
+        "created_at": "2026-02-09T16:01:07.300Z",
+        "updated_at": "2026-02-09T16:01:07.300Z"
+    }
+},
+{
+    "model": "transactions.transaction",
+    "pk": 46,
+    "fields": {
+        "user": [
+            "김여행"
+        ],
+        "account": 19,
+        "trip": 15,
+        "category": 10,
+        "transaction_type": "income",
+        "amount": "2000000",
+        "occurred_at": "2026-02-03T06:23:00Z",
+        "merchant": "",
+        "memo": "여행 비상금 입금",
+        "created_at": "2026-02-10T06:24:13.629Z",
+        "updated_at": "2026-02-10T06:25:06.212Z"
+    }
+},
+{
+    "model": "transactions.receipt",
+    "pk": 1,
+    "fields": {
+        "transaction": 39,
+        "file": "receipts/2026/02/10/영수증3.png",
+        "uploaded_at": "2026-02-09T15:57:21.716Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-02-10T08:30:16.002Z",
+        "user": [
+            "test"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "20",
+        "object_repr": "입출금계좌 (새마을금고)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\ud65c\\uc131\\ud654 \\uc0c1\\ud0dc\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-02-10T08:30:19.204Z",
+        "user": [
+            "test"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "20",
+        "object_repr": "입출금계좌 (새마을금고)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\ud65c\\uc131\\ud654 \\uc0c1\\ud0dc\"]}}]"
+    }
+}
+]
