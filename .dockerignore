@@ -1,0 +1,7 @@
+# .dockerignore 예시 (이미지 전송을 위해 media는 적지 마세요)
+.git/
+.venv/
+__pycache__/
+*.pyc
+*.sqlite3
+fly.toml

@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from decouple import config
 from dotenv import load_dotenv
+import dj_database_url
 
 load_dotenv()
 
@@ -16,8 +17,16 @@ SECRET_KEY = (
 DEBUG = os.environ.get("DEBUG", "0") == "1"
 
 # DEBUG = config('DEBUG', default=True, cast=bool)
-DEBUG = True
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+# DEBUG = True
+# ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+# ALLOWED_HOSTS = ["django-first2.fly.dev", "localhost", "127.0.0.1"]
+# CSRF_TRUSTED_ORIGINS = ["https://django-first2.fly.dev"]
+
+# 기존 설정은 주석 처리하거나 지우고 아래 내용을 넣으세요.
+ALLOWED_HOSTS = ["django-second-project.fly.dev", "localhost", "127.0.0.1"]
+
+# CSRF 설정을 반드시 해주어야 어드민 페이지 로그인이 가능합니다.
+CSRF_TRUSTED_ORIGINS = ["https://django-second-project.fly.dev"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -72,16 +82,57 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
+# 기존의 복잡한 DATABASES 설정 전체를 아래로 교체하세요.
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB", "second_project_db"),
-        "USER": os.environ.get("POSTGRES_USER", "django_myuser"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "strong-password"),
-        "HOST": os.environ.get("POSTGRES_HOST", "127.0.0.1"),
-        "PORT": os.environ.get("POSTGRES_PORT", "5432"),
-    }
+    'default': dj_database_url.config(
+        # DATABASE_URL 환경변수가 없을 때만 SQLite를 사용하도록 설정
+        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+        conn_max_age=600,
+    )
 }
+
+# Fly.io에서 제공하는 DATABASE_URL은 SSL 설정이 포함되어 있지 않을 수 있으므로
+# 아래 설정을 추가하여 Postgres 연결 시 에러를 방지합니다.
+if os.environ.get("DATABASE_URL"):
+    DATABASES["default"]["OPTIONS"] = {"sslmode": "disable"}
+
+
+
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=f"postgresql://{os.environ.get('POSTGRES_USER','django_myuser')}:"
+#                 f"{os.environ.get('POSTGRES_PASSWORD','strong-password')}@"
+#                 f"{os.environ.get('POSTGRES_HOST','127.0.0.1')}:"
+#                 f"{os.environ.get('POSTGRES_PORT','5432')}/"
+#                 f"{os.environ.get('POSTGRES_DB','second_project_db')}",
+#         conn_max_age=600,
+#         ssl_require=bool(os.environ.get("DATABASE_URL")),
+#     )
+# }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": os.environ.get("POSTGRES_DB", "second_project_db"),
+#         "USER": os.environ.get("POSTGRES_USER", "django_myuser"),
+#         "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "strong-password"),
+#         "HOST": os.environ.get("POSTGRES_HOST", "127.0.0.1"),
+#         "PORT": os.environ.get("POSTGRES_PORT", "5432"),
+#     },
+#     conn_max_age=600,
+#     ssl_require=bool(os.environ.get("DATABASE_URL")),  # Fly에서만 SSL 강제
+    
+# }
+
+
+# # DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.environ.get('DATABASE_URL'),
+#         conn_max_age=600
+#     )
+# }
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or "ci-dev-secret-key"
 
@@ -111,10 +162,24 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/dashboard/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
 
+
 if not DEBUG:
-    SECURE_SSL_REDIRECT = True
+    # 이 줄을 반드시 추가하세요! (Fly.io 프록시 설정)
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    
+    # 무한 루프 방지를 위해 일단 False로 바꾸거나 주석 처리하고 배포해 보세요.
+    SECURE_SSL_REDIRECT = False  
+    
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = 31536000
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
+    
+# if not DEBUG:
+#     SECURE_SSL_REDIRECT = True
+#     SESSION_COOKIE_SECURE = True
+#     CSRF_COOKIE_SECURE = True
+#     SECURE_HSTS_SECONDS = 31536000
+#     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#     SECURE_HSTS_PRELOAD = True

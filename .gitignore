@@ -14,7 +14,7 @@ venv/
 # Django runtime / local artifacts
 db.sqlite3
 db.sqlite3-journal
-media/
+# media/
 logs/
 *.log
 
